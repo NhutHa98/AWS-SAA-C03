@@ -167,4 +167,15 @@ Let’s build a clear **decision tree (text diagram)** showing **when to choose 
 
 SMB (Server Message Block) file server là một file server sử dụng giao thức SMB để chia sẻ tệp, thư mục, và máy in qua mạng. Đây là công nghệ chủ yếu được sử dụng trong Windows environments, nhưng cũng được hỗ trợ trên Linux (Samba) và macOS.
 
-AWS Global Accelerator (GA)
+AWS Global Accelerator (GA) is a networking service that improves availability, performance, and global reach of your applications hosted on AWS.
+
+It works at the network layer (Layer 4 - TCP/UDP) — not the application layer like CloudFront — and uses the AWS global network (not the public internet) to route user traffic efficiently to your application endpoints.
+| Feature               | **Global Accelerator**                           | **CloudFront**               |
+| :-------------------- | :----------------------------------------------- | :--------------------------- |
+| Layer                 | **Network (L4)**                                 | **Application (L7)**         |
+| Protocol              | TCP / UDP                                        | HTTP / HTTPS                 |
+| Use Case              | Low-latency access to apps (e.g., ALB, EC2, NLB) | Caching and content delivery |
+| Caching               | ❌ No                                             | ✅ Yes                        |
+| Static IPs            | ✅ Yes                                            | ❌ No                         |
+| Traffic Type          | Dynamic or non-HTTP (gaming, API, etc.)          | Static / HTTP content        |
+| Multi-region failover | ✅ Yes                                            | ⚠️ Possible, but slower      |
