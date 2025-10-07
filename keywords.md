@@ -107,6 +107,72 @@
 - **Purpose/Mục đích:** Fast, scalable data warehouse for analytics
 - **Use Case/Trường hợp:** Business intelligence, data analytics, reporting
 
+### 1.4 Analytics Services
+*Dịch vụ phân tích dữ liệu*
+
+**1.4.1 Athena** ⚡💰
+- EN: Serverless interactive query service for S3 data
+- VN: Dịch vụ truy vấn tương tác không máy chủ cho dữ liệu S3
+- **Purpose/Mục đích:** Run SQL queries directly on S3 data without infrastructure
+- **Use Case/Trường hợp:** Ad-hoc analysis, log analysis, data lake queries
+
+**1.4.2 AWS Glue** ⚡💰
+- EN: Serverless ETL service for data preparation
+- VN: Dịch vụ ETL không máy chủ để chuẩn bị dữ liệu
+- **Purpose/Mục đích:** Extract, transform, and load data between data stores
+- **Use Case/Trường hợp:** Data cataloging, ETL jobs, schema discovery
+
+**1.4.3 EMR (Elastic MapReduce)** ⚡💰
+- EN: Big data processing platform using Hadoop/Spark
+- VN: Nền tảng xử lý big data sử dụng Hadoop/Spark
+- **Purpose/Mục đích:** Process large datasets using distributed computing
+- **Use Case/Trường hợp:** Big data analytics, machine learning, data science
+
+**1.4.4 Kinesis Data Analytics** ⚡
+- EN: Real-time stream processing with SQL
+- VN: Xử lý luồng dữ liệu thời gian thực với SQL
+- **Purpose/Mục đích:** Analyze streaming data in real-time
+- **Use Case/Trường hợp:** Real-time dashboards, anomaly detection, live metrics
+
+**1.4.5 QuickSight** 🏗️💰
+- EN: Business intelligence and data visualization service
+- VN: Dịch vụ business intelligence và trực quan hóa dữ liệu
+- **Purpose/Mục đích:** Create interactive dashboards and reports
+- **Use Case/Trường hợp:** Executive dashboards, self-service BI, embedded analytics
+
+### 1.5 Data Transfer Services
+*Dịch vụ truyền tải dữ liệu*
+
+**1.5.1 Snowball Edge** 🏗️💰
+- EN: Edge computing device with 80TB storage and compute capacity
+- VN: Thiết bị edge computing với dung lượng 80TB và khả năng tính toán
+- **Purpose/Mục đích:** Data transfer and edge computing in remote locations
+- **Use Case/Trường hợp:** Large data migrations, edge processing, offline environments
+
+**1.5.2 Snowcone** 🏗️💰
+- EN: Small, portable edge computing device (8TB storage)
+- VN: Thiết bị edge computing nhỏ gọn, di động (8TB)
+- **Purpose/Mục đích:** Edge computing in space-constrained environments
+- **Use Case/Trường hợp:** Drones, vehicles, remote locations, IoT edge processing
+
+**1.5.3 Snowmobile** 🏗️💰
+- EN: Exabyte-scale data transfer truck (100PB capacity)
+- VN: Xe tải truyền dữ liệu quy mô exabyte (100PB)
+- **Purpose/Mục đích:** Massive data center migrations
+- **Use Case/Trường hợp:** Entire data center moves, legacy system consolidation
+
+**1.5.4 DataSync** 🏗️💰
+- EN: Online data transfer service for moving data between locations
+- VN: Dịch vụ truyền dữ liệu online để di chuyển dữ liệu giữa các vị trí
+- **Purpose/Mục đích:** Automated, secure data transfer over network
+- **Use Case/Trường hợp:** Hybrid cloud sync, data lake ingestion, backup to cloud
+
+**1.5.5 Transfer Family** 🏗️💰
+- EN: Managed FTP, FTPS, and SFTP service
+- VN: Dịch vụ FTP, FTPS và SFTP được quản lý
+- **Purpose/Mục đích:** Secure file transfer protocols as managed service
+- **Use Case/Trường hợp:** B2B file exchange, application integration, legacy system support
+
 ---
 
 ## 2. AWS Networking Services
@@ -184,32 +250,71 @@
 - **Purpose/Mục đích:** Control traffic at subnet level with stateless rules
 - **Use Case/Trường hợp:** Subnet-level security, defense in depth, compliance
 
-### 2.3 Connectivity Services
+### 2.3 Messaging & Eventing Services
+*Dịch vụ nhắn tin và sự kiện*
+
+**2.3.1 SQS (Simple Queue Service)** 🏗️⚡💰
+- EN: Fully managed message queuing service
+- VN: Dịch vụ hàng đợi tin nhắn được quản lý hoàn toàn
+- **Purpose/Mục đích:** Decouple application components with reliable messaging
+- **Use Case/Trường hợp:** Job queues, order processing, microservices communication
+
+**2.3.2 SNS (Simple Notification Service)** 🏗️⚡🔒
+- EN: Fully managed pub/sub messaging service
+- VN: Dịch vụ nhắn tin pub/sub được quản lý hoàn toàn
+- **Purpose/Mục đích:** Send notifications to multiple subscribers simultaneously
+- **Use Case/Trường hợp:** Push notifications, email alerts, fan-out messaging
+
+**2.3.3 EventBridge** 🏗️⚡🔒
+- EN: Serverless event bus for application integration
+- VN: Event bus không máy chủ để tích hợp ứng dụng
+- **Purpose/Mục đích:** Route events between AWS services and SaaS applications
+- **Use Case/Trường hợp:** Event-driven architectures, SaaS integration, microservices
+
+**2.3.4 Kinesis Data Streams** 🏗️⚡
+- EN: Real-time data streaming service
+- VN: Dịch vụ streaming dữ liệu thời gian thực
+- **Purpose/Mục đích:** Collect and process streaming data in real-time
+- **Use Case/Trường hợp:** Real-time analytics, log processing, IoT data ingestion
+
+**2.3.5 Step Functions** 🏗️⚡
+- EN: Visual workflow service for coordinating distributed applications
+- VN: Dịch vụ quy trình làm việc trực quan để điều phối ứng dụng phân tán
+- **Purpose/Mục đích:** Orchestrate multiple AWS services into workflows
+- **Use Case/Trường hợp:** Business processes, data pipelines, error handling workflows
+
+### 2.4 Connectivity Services
 *Dịch vụ kết nối*
 
-**2.3.1 VPN Gateway** 🏗️🔒💰
+**2.4.1 VPN Gateway** 🏗️🔒💰
 - EN: Connects on-premises networks to VPC via VPN
 - VN: Kết nối mạng on-premises với VPC qua VPN
 - **Purpose/Mục đích:** Secure connection between on-premises and AWS
 - **Use Case/Trường hợp:** Hybrid cloud, secure remote access, site-to-site connectivity
 
-**2.3.2 Direct Connect** 🏗️⚡💰
+**2.4.2 Direct Connect** 🏗️⚡💰
 - EN: Dedicated network connection from premises to AWS
 - VN: Kết nối mạng chuyên dụng từ cơ sở hạ tầng đến AWS
 - **Purpose/Mục đích:** High-bandwidth, low-latency connection to AWS
 - **Use Case/Trường hợp:** Large data transfers, consistent network performance
 
-**2.3.3 Transit Gateway** 🏗️💰
+**2.4.3 Transit Gateway** 🏗️💰
 - EN: Network hub connecting VPCs and on-premises networks
 - VN: Hub mạng kết nối các VPC và mạng on-premises
 - **Purpose/Mục đích:** Simplify network connectivity between multiple VPCs
 - **Use Case/Trường hợp:** Multi-VPC architectures, complex network topologies
 
-**2.3.4 VPC Peering** 🏗️🔒
+**2.4.4 VPC Peering** 🏗️🔒
 - EN: Network connection between two VPCs
 - VN: Kết nối mạng giữa hai VPC
 - **Purpose/Mục đích:** Enable direct communication between VPCs
 - **Use Case/Trường hợp:** Cross-VPC communication, shared services, multi-region
+
+**2.4.5 Global Accelerator** 🏗️⚡💰
+- EN: Network service that improves global application performance
+- VN: Dịch vụ mạng cải thiện hiệu suất ứng dụng toàn cầu
+- **Purpose/Mục đích:** Optimize global network performance using AWS backbone
+- **Use Case/Trường hợp:** Gaming applications, IoT, real-time APIs, global load balancing
 
 ---
 
@@ -263,6 +368,42 @@
 - VN: Dịch vụ được quản lý để tạo và kiểm soát khóa mã hóa
 - **Purpose/Mục đích:** Create and manage cryptographic keys for encryption
 - **Use Case/Trường hợp:** Data encryption, key rotation, compliance requirements
+
+**3.2.5 Network Firewall** 🔒
+- EN: Managed network firewall service with IPS capabilities
+- VN: Dịch vụ tường lửa mạng được quản lý với khả năng IPS
+- **Purpose/Mục đích:** Protect VPCs with managed firewall and intrusion prevention
+- **Use Case/Trường hợp:** Network security, deep packet inspection, compliance
+
+**3.2.6 Firewall Manager** 🔒💰
+- EN: Centralized security policy management across accounts
+- VN: Quản lý chính sách bảo mật tập trung qua các tài khoản
+- **Purpose/Mục đích:** Manage security policies across multiple AWS accounts
+- **Use Case/Trường hợp:** Multi-account governance, compliance enforcement, policy automation
+
+**3.2.7 Traffic Mirroring** 🔒
+- EN: Copy network traffic for analysis and security monitoring
+- VN: Sao chép lưu lượng mạng để phân tích và giám sát bảo mật
+- **Purpose/Mục đích:** Mirror VPC traffic to security analysis tools
+- **Use Case/Trường hợp:** Network forensics, IDS/IPS, compliance monitoring
+
+**3.2.8 Macie** 🔒💰
+- EN: ML-powered data security service for discovering sensitive data
+- VN: Dịch vụ bảo mật dữ liệu được hỗ trợ ML để khám phá dữ liệu nhạy cảm
+- **Purpose/Mục đích:** Discover, classify, and protect sensitive data in S3
+- **Use Case/Trường hợp:** PII discovery, data classification, compliance monitoring
+
+**3.2.9 Secrets Manager** 🔒💰
+- EN: Centralized secrets management with automatic rotation
+- VN: Quản lý bí mật tập trung với xoay vòng tự động
+- **Purpose/Mục đích:** Store, retrieve, and rotate application secrets
+- **Use Case/Trường hợp:** Database credentials, API keys, application secrets
+
+**3.2.10 IAM Access Analyzer** 🔒
+- EN: Analyze resource policies to identify security risks
+- VN: Phân tích chính sách tài nguyên để xác định rủi ro bảo mật
+- **Purpose/Mục đích:** Identify overly permissive resource access policies
+- **Use Case/Trường hợp:** Security assessment, policy validation, compliance auditing
 
 ---
 
@@ -391,6 +532,39 @@
 - **Purpose/Mục đích:** Deploy and scale third-party network virtual appliances
 - **Use Case/Trường hợp:** Firewalls, intrusion detection, deep packet inspection
 
+### 5.4 Advanced Networking Concepts
+*Khái niệm mạng nâng cao*
+
+**5.4.1 SPICE (QuickSight)** ⚡💰
+- EN: Super-fast, Parallel, In-memory Calculation Engine
+- VN: Công cụ tính toán siêu nhanh, song song, trong bộ nhớ
+- **Purpose/Mục đích:** High-performance in-memory analytics engine for QuickSight
+- **Use Case/Trường hợp:** Fast dashboard queries, interactive analytics, large dataset processing
+
+**5.4.2 NFS (Network File System)** 🏗️🔒
+- EN: Protocol for accessing files over network as if local
+- VN: Giao thức truy cập file qua mạng như file cục bộ
+- **Purpose/Mục đích:** Mount remote file systems as local drives
+- **Use Case/Trường hợp:** Shared storage, Snowball Edge data transfer, EFS access
+
+**5.4.3 SMB (Server Message Block)** 🏗️🔒
+- EN: Network file sharing protocol used primarily in Windows environments
+- VN: Giao thức chia sẻ file mạng chủ yếu dùng trong môi trường Windows
+- **Purpose/Mục đích:** Share files, printers, and resources over network
+- **Use Case/Trường hợp:** Windows file sharing, Storage Gateway, cross-platform access
+
+**5.4.4 GENEVE Protocol** 🔒
+- EN: Generic Network Virtualization Encapsulation protocol
+- VN: Giao thức đóng gói ảo hóa mạng chung
+- **Purpose/Mục đích:** Network overlay protocol for Gateway Load Balancer
+- **Use Case/Trường hợp:** Traffic mirroring, security appliance integration, network virtualization
+
+**5.4.5 Anycast IP** ⚡🔒
+- EN: Network addressing where single IP is advertised from multiple locations
+- VN: Địa chỉ mạng nơi một IP được quảng cáo từ nhiều vị trí
+- **Purpose/Mục đích:** Route traffic to nearest/best performing location
+- **Use Case/Trường hợp:** Global Accelerator, DNS, DDoS mitigation
+
 ---
 
 ## 6. AWS Architecture Patterns
@@ -484,6 +658,165 @@
 - VN: Dịch vụ cung cấp khuyến nghị tối ưu hóa
 - **Purpose/Mục đích:** Provide best practice recommendations across multiple categories
 - **Use Case/Trường hợp:** Cost optimization, security improvements, performance tuning, fault tolerance
+
+---
+
+---
+
+## 8. Data Analytics & Business Intelligence
+*Phân tích dữ liệu & Business Intelligence*
+
+### 8.1 Data Processing Concepts
+*Khái niệm xử lý dữ liệu*
+
+**8.1.1 ETL (Extract, Transform, Load)** ⚡💰
+- EN: Process of extracting data from sources, transforming it, and loading into target
+- VN: Quy trình trích xuất dữ liệu từ nguồn, chuyển đổi và tải vào đích
+- **Purpose/Mục đích:** Prepare and integrate data from multiple sources
+- **Use Case/Trường hợp:** Data warehousing, data lake preparation, system integration
+
+**8.1.2 ELT (Extract, Load, Transform)** ⚡💰
+- EN: Process of extracting data, loading into target, then transforming
+- VN: Quy trình trích xuất dữ liệu, tải vào đích, sau đó chuyển đổi
+- **Purpose/Mục đích:** Leverage target system's processing power for transformations
+- **Use Case/Trường hợp:** Cloud data warehouses, big data platforms, modern analytics
+
+**8.1.3 Data Lake** 🏗️💰
+- EN: Centralized repository storing structured and unstructured data at scale
+- VN: Kho lưu trữ tập trung chứa dữ liệu có cấu trúc và phi cấu trúc ở quy mô lớn
+- **Purpose/Mục đích:** Store raw data in native format for future analysis
+- **Use Case/Trường hợp:** Big data analytics, ML training data, exploratory analysis
+
+**8.1.4 Data Warehouse** ⚡💰
+- EN: Optimized database system for analytical queries and reporting
+- VN: Hệ thống cơ sở dữ liệu được tối ưu hóa cho truy vấn phân tích và báo cáo
+- **Purpose/Mục đích:** Structured data storage optimized for business intelligence
+- **Use Case/Trường hợp:** Business reporting, OLAP, executive dashboards
+
+**8.1.5 OLAP (Online Analytical Processing)** ⚡
+- EN: Technology for fast analysis of multidimensional data
+- VN: Công nghệ phân tích nhanh dữ liệu đa chiều
+- **Purpose/Mục đích:** Enable complex analytical queries on large datasets
+- **Use Case/Trường hợp:** Business intelligence, data mining, financial analysis
+
+### 8.2 Streaming & Real-time Processing
+*Xử lý streaming và thời gian thực*
+
+**8.2.1 Stream Processing** ⚡
+- EN: Processing data in real-time as it flows through the system
+- VN: Xử lý dữ liệu thời gian thực khi nó chảy qua hệ thống
+- **Purpose/Mục đích:** Analyze data immediately as it arrives
+- **Use Case/Trường hợp:** Real-time analytics, fraud detection, IoT monitoring
+
+**8.2.2 Batch Processing** 💰
+- EN: Processing data in discrete chunks or batches
+- VN: Xử lý dữ liệu theo từng khối hoặc lô riêng biệt
+- **Purpose/Mục đích:** Process large volumes of data efficiently
+- **Use Case/Trường hợp:** Daily reports, data warehouse loading, historical analysis
+
+**8.2.3 Sharding** ⚡
+- EN: Distributing data across multiple machines for parallel processing
+- VN: Phân phối dữ liệu qua nhiều máy để xử lý song song
+- **Purpose/Mục đích:** Scale processing power by distributing workload
+- **Use Case/Trường hợp:** Kinesis data streams, database scaling, distributed computing
+
+**8.2.4 Partition Key** ⚡
+- EN: Key used to determine which shard or partition data belongs to
+- VN: Khóa dùng để xác định dữ liệu thuộc shard hoặc phân vùng nào
+- **Purpose/Mục đích:** Ensure related data is processed together
+- **Use Case/Trường hợp:** Kinesis streams, DynamoDB, distributed databases
+
+### 8.3 Business Intelligence Concepts
+*Khái niệm Business Intelligence*
+
+**8.3.1 KPI (Key Performance Indicator)** 📊
+- EN: Measurable value demonstrating how effectively objectives are achieved
+- VN: Giá trị có thể đo lường chứng minh mức độ đạt được mục tiêu
+- **Purpose/Mục đích:** Track business performance against strategic goals
+- **Use Case/Trường hợp:** Executive dashboards, performance monitoring, business reviews
+
+**8.3.2 Drill Down** 📊
+- EN: Navigation from summary to detailed level in data analysis
+- VN: Điều hướng từ mức tóm tắt đến mức chi tiết trong phân tích dữ liệu
+- **Purpose/Mục đích:** Explore data at different levels of granularity
+- **Use Case/Trường hợp:** Interactive dashboards, root cause analysis, data exploration
+
+**8.3.3 Cross-filtering** 📊
+- EN: Selecting data in one visualization affects others on the same dashboard
+- VN: Chọn dữ liệu trong một biểu đồ ảnh hưởng đến các biểu đồ khác cùng dashboard
+- **Purpose/Mục đích:** Enable interactive exploration across related visuals
+- **Use Case/Trường hợp:** Interactive dashboards, data discovery, contextual analysis
+
+**8.3.4 Row-Level Security (RLS)** 🔒
+- EN: Security model that restricts data access based on user characteristics
+- VN: Mô hình bảo mật hạn chế truy cập dữ liệu dựa trên đặc điểm người dùng
+- **Purpose/Mục đích:** Ensure users only see data they're authorized to access
+- **Use Case/Trường hợp:** Multi-tenant dashboards, departmental reporting, data privacy
+
+**8.3.5 Embedded Analytics** 📊💰
+- EN: Integration of BI capabilities directly into business applications
+- VN: Tích hợp khả năng BI trực tiếp vào ứng dụng kinh doanh
+- **Purpose/Mục đích:** Provide analytics within existing user workflows
+- **Use Case/Trường hợp:** Customer portals, SaaS applications, internal tools
+
+### 8.4 Data Formats & Storage
+*Định dạng dữ liệu và lưu trữ*
+
+**8.4.1 Parquet** ⚡💰
+- EN: Columnar storage file format optimized for analytics
+- VN: Định dạng file lưu trữ cột được tối ưu hóa cho phân tích
+- **Purpose/Mục đích:** Efficient storage and querying of analytical data
+- **Use Case/Trường hợp:** Data lakes, Athena queries, Spark processing
+
+**8.4.2 ORC (Optimized Row Columnar)** ⚡💰
+- EN: Columnar storage format with compression and indexing
+- VN: Định dạng lưu trữ cột với nén và lập chỉ mục
+- **Purpose/Mục đích:** High-performance storage for Hive-based analytics
+- **Use Case/Trường hợp:** EMR processing, Hive queries, big data analytics
+
+**8.4.3 Avro** ⚡
+- EN: Schema evolution-friendly serialization format
+- VN: Định dạng serialization thân thiện với sự phát triển schema
+- **Purpose/Mục đích:** Flexible data serialization with schema evolution support
+- **Use Case/Trường hợp:** Streaming data, schema evolution, Kafka messages
+
+**8.4.4 Delta Lake** ⚡
+- EN: Storage layer providing ACID transactions on top of data lakes
+- VN: Lớp lưu trữ cung cấp giao dịch ACID trên data lake
+- **Purpose/Mục đích:** Reliable data lakes with transactional consistency
+- **Use Case/Trường hợp:** Data lake reliability, time travel, concurrent access
+
+---
+
+## 9. Machine Learning & AI Services
+*Dịch vụ Machine Learning và AI*
+
+### 9.1 ML Platform Services
+*Dịch vụ nền tảng ML*
+
+**9.1.1 SageMaker** 🏗️⚡💰
+- EN: Fully managed machine learning platform
+- VN: Nền tảng machine learning được quản lý hoàn toàn
+- **Purpose/Mục đích:** Build, train, and deploy ML models at scale
+- **Use Case/Trường hợp:** Model development, ML pipelines, model hosting
+
+**9.1.2 Comprehend** ⚡💰
+- EN: Natural language processing service for text analysis
+- VN: Dịch vụ xử lý ngôn ngữ tự nhiên để phân tích văn bản
+- **Purpose/Mục đích:** Extract insights from text using NLP
+- **Use Case/Trường hợp:** Sentiment analysis, entity extraction, document classification
+
+**9.1.3 Rekognition** ⚡💰
+- EN: Image and video analysis service using deep learning
+- VN: Dịch vụ phân tích hình ảnh và video sử dụng deep learning
+- **Purpose/Mục đích:** Analyze images and videos for objects, faces, and activities
+- **Use Case/Trường hợp:** Content moderation, facial recognition, object detection
+
+**9.1.4 Textract** ⚡💰
+- EN: Extract text and data from documents using OCR and ML
+- VN: Trích xuất văn bản và dữ liệu từ tài liệu sử dụng OCR và ML
+- **Purpose/Mục đích:** Automatically extract structured data from documents
+- **Use Case/Trường hợp:** Document processing, form analysis, invoice processing
 
 ---
 
