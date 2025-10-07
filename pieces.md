@@ -53,9 +53,14 @@ Do you need to analyze data?
 
 
 
-**Summary:**
+| Service                 | Description                                                                               | Best For                                                          |
+| ----------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| **AWS Snowcone**        | Small, portable (8 TB) version of Snowball Edge. Runs EC2 and Lambda locally.             | Edge computing in tight or mobile spaces (e.g. drones, vehicles). |
+| **AWS Snowmobile**      | Truck-sized data transfer service (up to 100 PB per truck).                               | Massive data migrations (exabyte scale).                          |
+| **AWS DataSync**        | Software-based online data transfer tool (no physical device).                            | Continuous or scheduled transfers over the internet.              |
+| **AWS Transfer Family** | Provides managed FTP, FTPS, and SFTP endpoints for S3 and EFS.                            | Application-level file transfers.                                 |
+| **AWS Storage Gateway** | Hybrid cloud storage connecting on-prem apps to AWS storage (file, volume, or tape mode). | Extending on-premises storage to AWS.                             |
 
-* **NFS (Network File System)** is a protocol that lets you access and transfer files over a network as if they were on a local drive.
-* On **AWS Snowball Edge**, NFS allows you to **mount the device** on your local server and **copy files directly** using standard file operations.
-* It uses **NFSv3**, supports **AES-256 encryption**, and integrates with **AWS KMS** for key management.
-* This makes it easy and secure to move large datasets to the Snowball Edge without special software.
+
+
+
