@@ -42,3 +42,20 @@ Do you need to analyze data?
              │
              ├── Yes → 🧠 Use Amazon EMR (Spark/Hadoop) or SageMaker
              └── No → ✅ Stick with Athena or Redshift depending on workload
+
+
+**Summary:**
+
+* **NFS (Network File System)** is a protocol that lets you access and transfer files over a network as if they were on a local drive.
+* On **AWS Snowball Edge**, NFS allows you to **mount the device** on your local server and **copy files directly** using standard file operations.
+* It uses **NFSv3**, supports **AES-256 encryption**, and integrates with **AWS KMS** for key management.
+* This makes it easy and secure to move large datasets to the Snowball Edge without special software.
+
+
+
+**Summary:**
+
+* **NFS (Network File System)** is a protocol that lets you access and transfer files over a network as if they were on a local drive.
+* On **AWS Snowball Edge**, NFS allows you to **mount the device** on your local server and **copy files directly** using standard file operations.
+* It uses **NFSv3**, supports **AES-256 encryption**, and integrates with **AWS KMS** for key management.
+* This makes it easy and secure to move large datasets to the Snowball Edge without special software.
