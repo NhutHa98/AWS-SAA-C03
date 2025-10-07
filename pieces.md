@@ -164,3 +164,7 @@ Let’s build a clear **decision tree (text diagram)** showing **when to choose 
 | **Stream data continuously** → Kinesis             |         |
 | **Run these tasks in order** → Step Functions      |         |
 
+
+SMB (Server Message Block) file server là một file server sử dụng giao thức SMB để chia sẻ tệp, thư mục, và máy in qua mạng. Đây là công nghệ chủ yếu được sử dụng trong Windows environments, nhưng cũng được hỗ trợ trên Linux (Samba) và macOS.
+
+AWS Global Accelerator (GA)
