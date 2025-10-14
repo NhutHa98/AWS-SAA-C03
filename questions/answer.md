@@ -924,7 +924,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 ### When should I choose Provisioned IOPS over Standard RDS storage?
 
 - [ ] If you have batch-oriented workloads.
-- [ ] If you use production online transaction processing (OLTP) workloads.
+- [x] If you use production online transaction processing (OLTP) workloads.
 - [ ] If you have workloads that are not sensitive to consistent performance.
 
 **[⬆ Back to Top](#table-of-contents)**
