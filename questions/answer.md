@@ -940,7 +940,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 ### Because of the extensibility limitations of striped storage attached to Windows Server, Amazon RDS does not currently support increasing storage on a [...] DB Instance.
 
-- [ ] SQL Server.
+- [x] SQL Server.
 - [ ] MySQL.
 - [ ] Oracle.
 
@@ -948,7 +948,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 ### In regards to IAM you can edit user properties later, but you cannot use the console to change the [...].
 
-- [ ] user name.
+- [x] user name.
 - [ ] password.
 - [ ] default group.
 
@@ -958,7 +958,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 - [ ] Yes, EC2 Container Service supports any container service you need.
 - [ ] Yes, EC2 Container Service also supports Microsoft container service.
-- [ ] No, Docker is the only container platform supported by EC2 Container Service presently.
+- [x] No, Docker is the only container platform supported by EC2 Container Service presently.
 - [ ] Yes, EC2 Container Service supports Microsoft container service and Openstack.
 
 **[⬆ Back to Top](#table-of-contents)**
