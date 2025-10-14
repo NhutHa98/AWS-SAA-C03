@@ -788,7 +788,78 @@
 
 ---
 
-## 9. Machine Learning & AI Services
+## 9. AWS Media Services
+*Dịch vụ truyền thông AWS*
+
+### 9.1 Media Processing Services
+*Dịch vụ xử lý truyền thông*
+
+**9.1.1 Elastic Transcoder** 🏗️⚡💰
+- EN: Cloud-based media transcoding service for converting video/audio files
+- VN: Dịch vụ chuyển đổi định dạng media trên cloud để chuyển đổi file video/audio
+- **Purpose/Mục đích:** Convert media files between different formats and resolutions
+- **Use Case/Trường hợp:** Video streaming preparation, mobile app content, multi-format delivery
+
+**9.1.2 MediaConvert** 🏗️⚡💰
+- EN: File-based video transcoding service with broadcast-grade features
+- VN: Dịch vụ chuyển đổi video dựa trên file với tính năng cấp phát sóng
+- **Purpose/Mục đích:** Professional video processing and format conversion
+- **Use Case/Trường hợp:** Broadcast workflows, professional video production, content preparation
+
+**9.1.3 MediaLive** 🏗️⚡💰
+- EN: Live video processing service for broadcast and streaming
+- VN: Dịch vụ xử lý video trực tiếp cho phát sóng và streaming
+- **Purpose/Mục đích:** Encode live video streams for broadcast and multiscreen delivery
+- **Use Case/Trường hợp:** Live streaming, broadcast TV, real-time video processing
+
+**9.1.4 MediaPackage** 🏗️⚡🔒
+- EN: Video origination and packaging service for secure delivery
+- VN: Dịch vụ tạo nguồn và đóng gói video để phân phối bảo mật
+- **Purpose/Mục đích:** Package and deliver video content securely to various devices
+- **Use Case/Trường hợp:** OTT platforms, video streaming, content protection
+
+**9.1.5 MediaStore** 🏗️⚡💰
+- EN: High-performance storage service optimized for media
+- VN: Dịch vụ lưu trữ hiệu suất cao được tối ưu hóa cho media
+- **Purpose/Mục đích:** Store and deliver video content with high throughput
+- **Use Case/Trường hợp:** Live streaming origin, media workflows, high-bandwidth content
+
+### 9.2 Media Streaming Concepts
+*Khái niệm streaming media*
+
+**9.2.1 Transcoding** ⚡💰
+- EN: Process of converting media from one format/codec to another
+- VN: Quá trình chuyển đổi media từ định dạng/codec này sang khác
+- **Purpose/Mục đích:** Optimize media for different devices and bandwidths
+- **Use Case/Trường hợp:** Multi-device support, bandwidth optimization, format compatibility
+
+**9.2.2 HLS (HTTP Live Streaming)** ⚡
+- EN: Adaptive bitrate streaming protocol developed by Apple
+- VN: Giao thức streaming bitrate thích ứng được phát triển bởi Apple
+- **Purpose/Mục đích:** Deliver live and on-demand video over HTTP
+- **Use Case/Trường hợp:** iOS streaming, adaptive video delivery, live broadcasts
+
+**9.2.3 DASH (Dynamic Adaptive Streaming)** ⚡
+- EN: Adaptive streaming technique enabling high-quality streaming
+- VN: Kỹ thuật streaming thích ứng cho phép streaming chất lượng cao
+- **Purpose/Mục đích:** Provide smooth streaming experience across different network conditions
+- **Use Case/Trường hợp:** Video streaming platforms, bandwidth adaptation, quality optimization
+
+**9.2.4 ABR (Adaptive Bitrate Streaming)** ⚡
+- EN: Streaming technique that adjusts video quality based on network conditions
+- VN: Kỹ thuật streaming điều chỉnh chất lượng video dựa trên điều kiện mạng
+- **Purpose/Mục đích:** Optimize streaming quality based on available bandwidth
+- **Use Case/Trường hợp:** Video streaming, mobile content delivery, network optimization
+
+**9.2.5 CDN (Content Delivery Network)** ⚡🔒💰
+- EN: Geographically distributed servers for content caching and delivery
+- VN: Máy chủ phân tán địa lý để cache và phân phối nội dung
+- **Purpose/Mục đích:** Deliver media content with low latency globally
+- **Use Case/Trường hợp:** Video streaming, global content distribution, performance optimization
+
+---
+
+## 10. Machine Learning & AI Services
 *Dịch vụ Machine Learning và AI*
 
 ### 9.1 ML Platform Services
