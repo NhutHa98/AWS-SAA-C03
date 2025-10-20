@@ -19,3 +19,10 @@ So:
 ✅ Production OLTP workloads → Use Provisioned IOPS.
 
 ❌ Workloads not sensitive to consistent performance → Don’t need Provisioned IOPS.
+
+
+| Thuật ngữ                            | Dịch vụ         | Chức năng chính                             | Mục đích sử dụng                            |
+| ------------------------------------ | --------------- | ------------------------------------------- | ------------------------------------------- |
+| **RRS (Reduced Redundancy Storage)** | Amazon S3       | Lưu trữ giá rẻ, độ bền thấp                 | Cho dữ liệu có thể tái tạo (PDF, CSV)       |
+| **EMR (Elastic MapReduce)**          | Amazon EMR      | Xử lý dữ liệu lớn (Big Data, Hadoop, Spark) | Sinh báo cáo, xử lý log hàng ngày           |
+| **Reserved Instance (Redshift)**     | Amazon Redshift | Kho dữ liệu phân tích (data warehouse)      | Giảm chi phí cho workload chạy thường xuyên |
