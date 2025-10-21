@@ -968,7 +968,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 - [ ] Amazon S3 as both the origin server and for caching.
 - [ ] AWS Storage Gateway as the origin server and Amazon EC2 for caching.
 - [ ] AWS CloudFront as both the origin server and for caching.
-- [ ] Amazon S3 as the origin server and Amazon CloudFront for caching.
+- [x] Amazon S3 as the origin server and Amazon CloudFront for caching.
 
 **[⬆ Back to Top](#table-of-contents)**
 

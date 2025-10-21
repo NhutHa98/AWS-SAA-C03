@@ -26,3 +26,25 @@ So:
 | **RRS (Reduced Redundancy Storage)** | Amazon S3       | Lưu trữ giá rẻ, độ bền thấp                 | Cho dữ liệu có thể tái tạo (PDF, CSV)       |
 | **EMR (Elastic MapReduce)**          | Amazon EMR      | Xử lý dữ liệu lớn (Big Data, Hadoop, Spark) | Sinh báo cáo, xử lý log hàng ngày           |
 | **Reserved Instance (Redshift)**     | Amazon Redshift | Kho dữ liệu phân tích (data warehouse)      | Giảm chi phí cho workload chạy thường xuyên |
+
+
+Spot Instance là loại EC2 Instance giá rẻ mà Amazon bán lại công suất dư thừa (unused capacity) trong hệ thống của họ.
+
+Bạn có thể mua rẻ hơn tới 70–90% so với giá On-Demand.
+
+Tuy nhiên, vì đây là tài nguyên “dư”, nên AWS có thể thu hồi (tắt instance) bất kỳ lúc nào nếu họ cần lại công suất đó cho người khác.
+
+
+💡 Khi nào nên dùng Spot Instances
+
+Spot Instances rất phù hợp cho các công việc:
+
+Trường hợp	Giải thích
+✅ Batch processing	Các job xử lý theo lô (như EMR job, video encoding, big data, CI/CD...) có thể tạm dừng và chạy lại được.
+✅ Stateless workload	Ứng dụng không phụ thuộc vào trạng thái máy cụ thể, có thể phân phối lại công việc nếu một máy bị tắt.
+✅ Big Data / EMR	Bạn có thể trộn Spot (cho task node) và On-Demand (cho master/core node) để tiết kiệm tiền mà vẫn ổn định.
+
+
+Amazon Instance Store – temporary block storage physically attached to the host computer (data is lost when the instance stops).
+
+Amazon Elastic Block Store (EBS) – persistent block storage that remains available even after stopping or terminating the instance.
