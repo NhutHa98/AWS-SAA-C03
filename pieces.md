@@ -48,3 +48,13 @@ Trường hợp	Giải thích
 Amazon Instance Store – temporary block storage physically attached to the host computer (data is lost when the instance stops).
 
 Amazon Elastic Block Store (EBS) – persistent block storage that remains available even after stopping or terminating the instance.
+
+
+
+| Option                         | Type             | POSIX      | Scalable   | Managed | Typical Use                             |
+| ------------------------------ | ---------------- | ---------- | ---------- | ------- | --------------------------------------- |
+| **Amazon EFS**                 | NFS              | ✅          | ✅          | ✅       | General Linux apps, web, shared storage |
+| **Amazon FSx for Lustre**      | HPC File System  | ✅          | ✅          | ✅       | HPC, ML, big data                       |
+| **Amazon FSx for Windows FS**  | SMB              | ❌          | ✅          | ✅       | Windows workloads                       |
+| **S3 File Gateway**            | Object (via NFS) | ⚠️ Partial | ✅          | ✅       | Archival, backup, low-write workloads   |
+| **Self-managed NFS/GlusterFS** | Custom           | ✅          | ✅ (manual) | ❌       | Custom control or hybrid setups         |

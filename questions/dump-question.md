@@ -757,6 +757,7 @@ B. Congure AWS Systems Manager Patch Manager to apply the patch to all EC2 insta
 C. Schedule an AWS Systems Manager maintenance window to apply the patch to all EC2 instances.
 D. Use AWS Systems Manager Run Command to run a custom command that applies the patch to all EC2 instances.
 ```
+Question #51 Topic 1
 
 A company is developing an application that provides order shipping statistics for retrieval by a REST API. The company wants to extract the
 shipping statistics, organize the data into an easy-to-read HTML format, and send the report to several email addresses at the same time every
