@@ -19,7 +19,7 @@ volume in that Region.
 ```
 Question #2 Topic 1
 
-A company needs the ability to analyze the log les of its proprietary application. The logs are stored in JSON format in an Amazon S3 bucket.
+A company needs the ability to analyze the log files of its proprietary application. The logs are stored in JSON format in an Amazon S3 bucket.
 Queries will be simple and will run on-demand. A solutions architect needs to perform the analysis with minimal changes to the existing
 architecture.
 What should the solutions architect do to meet these requirements with the LEAST amount of operational overhead?
@@ -71,13 +71,13 @@ D. Congure the Application Load Balancer to send the request to both servers. Re
 ```
 Question #6 Topic 1
 
-A company uses NFS to store large video les in on-premises network attached storage. Each video le ranges in size from 1 MB to 500 GB. The
-total storage is 70 TB and is no longer growing. The company decides to migrate the video les to Amazon S3. The company must migrate the
-video les as soon as possible while using the least possible network bandwidth.
+A company uses NFS to store large video files in on-premises network attached storage. Each video le ranges in size from 1 MB to 500 GB. The
+total storage is 70 TB and is no longer growing. The company decides to migrate the video files to Amazon S3. The company must migrate the
+video files as soon as possible while using the least possible network bandwidth.
 Which solution will meet these requirements?
 
 ```
-A. Create an S3 bucket. Create an IAM role that has permissions to write to the S3 bucket. Use the AWS CLI to copy all les locally to the S
+A. Create an S3 bucket. Create an IAM role that has permissions to write to the S3 bucket. Use the AWS CLI to copy all files locally to the S
 bucket.
 B. Create an AWS Snowball Edge job. Receive a Snowball Edge device on premises. Use the Snowball Edge client to transfer data to the
 device. Return the device so that AWS can import the data into Amazon S3.
@@ -123,10 +123,10 @@ compute nodes.
 ```
 Question #9 Topic 1
 
-A company is running an SMB le server in its data center. The le server stores large les that are accessed frequently for the rst few days after
-the les are created. After 7 days the les are rarely accessed.
+A company is running an SMB le server in its data center. The le server stores large files that are accessed frequently for the rst few days after
+the files are created. After 7 days the files are rarely accessed.
 The total data size is increasing and is close to the company's total storage capacity. A solutions architect must increase the company's available
-storage space without losing low-latency access to the most recently accessed les. The solutions architect must also provide le lifecycle
+storage space without losing low-latency access to the most recently accessed files. The solutions architect must also provide le lifecycle
 management to avoid future storage issues.
 Which solution will meet these requirements?
 
@@ -330,9 +330,9 @@ D. Use an Amazon S3 bucket to host the website's static content. Deploy an Amazo
 Use Amazon API Gateway and AWS Lambda functions for the backend APIs. Store the data in Amazon DynamoDB.
 ```
 
-A solutions architect is using Amazon S3 to design the storage architecture of a new digital media application. The media les must be resilient to
-the loss of an Availability Zone. Some les are accessed frequently while other les are rarely accessed in an unpredictable pattern. The solutions
-architect must minimize the costs of storing and retrieving the media les.
+A solutions architect is using Amazon S3 to design the storage architecture of a new digital media application. The media files must be resilient to
+the loss of an Availability Zone. Some files are accessed frequently while other files are rarely accessed in an unpredictable pattern. The solutions
+architect must minimize the costs of storing and retrieving the media files.
 Which storage option meets these requirements?
 
 ```
@@ -343,8 +343,8 @@ D. S3 One Zone-Infrequent Access (S3 One Zone-IA)
 ```
 Question #23 Topic 1
 
-A company is storing backup les by using Amazon S3 Standard storage. The les are accessed frequently for 1 month. However, the les are not
-accessed after 1 month. The company must keep the les indenitely.
+A company is storing backup files by using Amazon S3 Standard storage. The files are accessed frequently for 1 month. However, the files are not
+accessed after 1 month. The company must keep the files indenitely.
 Which storage solution will meet these requirements MOST cost-effectively?
 
 ```
@@ -502,9 +502,9 @@ integration with Kinesis Data Firehose to remove sensitive data. Other applicati
 C. Stream the transactions data into Amazon Kinesis Data Streams. Use AWS Lambda integration to remove sensitive data from every
 transaction and then store the transactions data in Amazon DynamoDB. Other applications can consume the transactions data off the Kinesis
 data stream.
-D. Store the batched transactions data in Amazon S3 as les. Use AWS Lambda to process every le and remove sensitive data before
-updating the les in Amazon S3. The Lambda function then stores the data in Amazon DynamoDB. Other applications can consume
-transaction les stored in Amazon S3.
+D. Store the batched transactions data in Amazon S3 as files. Use AWS Lambda to process every le and remove sensitive data before
+updating the files in Amazon S3. The Lambda function then stores the data in Amazon DynamoDB. Other applications can consume
+transaction files stored in Amazon S3.
 ```
 
 A company hosts its multi-tier applications on AWS. For compliance, governance, auditing, and security, the company must track conguration
@@ -687,8 +687,8 @@ Question #46 Topic 1
 
 A company has an application that provides marketing services to stores. The services are based on previous purchases by store customers. The
 stores upload transaction data to the company through SFTP, and the data is processed and analyzed to generate new marketing offers. Some of
-the les can exceed 200 GB in size.
-Recently, the company discovered that some of the stores have uploaded les that contain personally identiable information (PII) that should not
+the files can exceed 200 GB in size.
+Recently, the company discovered that some of the stores have uploaded files that contain personally identiable information (PII) that should not
 have been included. The company wants administrators to be alerted if PII is shared again. The company also wants to automate remediation.
 What should a solutions architect do to meet these requirements with the LEAST development effort?
 
@@ -729,21 +729,21 @@ D. Move the catalog to an Amazon Elastic File System (Amazon EFS) le system.
 ```
 Question #49 Topic 1
 
-A company stores call transcript les on a monthly basis. Users access the les randomly within 1 year of the call, but users access the les
-infrequently after 1 year. The company wants to optimize its solution by giving users the ability to query and retrieve les that are less than 1-year-
-old as quickly as possible. A delay in retrieving older les is acceptable.
+A company stores call transcript files on a monthly basis. Users access the files randomly within 1 year of the call, but users access the files
+infrequently after 1 year. The company wants to optimize its solution by giving users the ability to query and retrieve files that are less than 1-year-
+old as quickly as possible. A delay in retrieving older files is acceptable.
 Which solution will meet these requirements MOST cost-effectively?
 
 ```
-A. Store individual les with tags in Amazon S3 Glacier Instant Retrieval. Query the tags to retrieve the les from S3 Glacier Instant Retrieval.
-B. Store individual les in Amazon S3 Intelligent-Tiering. Use S3 Lifecycle policies to move the les to S3 Glacier Flexible Retrieval after 1 year.
-Query and retrieve the les that are in Amazon S3 by using Amazon Athena. Query and retrieve the les that are in S3 Glacier by using S
+A. Store individual files with tags in Amazon S3 Glacier Instant Retrieval. Query the tags to retrieve the files from S3 Glacier Instant Retrieval.
+B. Store individual files in Amazon S3 Intelligent-Tiering. Use S3 Lifecycle policies to move the files to S3 Glacier Flexible Retrieval after 1 year.
+Query and retrieve the files that are in Amazon S3 by using Amazon Athena. Query and retrieve the files that are in S3 Glacier by using S
 Glacier Select.
-C. Store individual les with tags in Amazon S3 Standard storage. Store search metadata for each archive in Amazon S3 Standard storage.
-Use S3 Lifecycle policies to move the les to S3 Glacier Instant Retrieval after 1 year. Query and retrieve the les by searching for metadata
+C. Store individual files with tags in Amazon S3 Standard storage. Store search metadata for each archive in Amazon S3 Standard storage.
+Use S3 Lifecycle policies to move the files to S3 Glacier Instant Retrieval after 1 year. Query and retrieve the files by searching for metadata
 from Amazon S3.
-D. Store individual les in Amazon S3 Standard storage. Use S3 Lifecycle policies to move the les to S3 Glacier Deep Archive after 1 year.
-Store search metadata in Amazon RDS. Query the les from Amazon RDS. Retrieve the les from S3 Glacier Deep Archive.
+D. Store individual files in Amazon S3 Standard storage. Use S3 Lifecycle policies to move the files to S3 Glacier Deep Archive after 1 year.
+Store search metadata in Amazon RDS. Query the files from Amazon RDS. Retrieve the files from S3 Glacier Deep Archive.
 ```
 Question #50 Topic 1
 
@@ -776,7 +776,7 @@ send the report by email.
 ```
 Question #52 Topic 1
 
-A company wants to migrate its on-premises application to AWS. The application produces output les that vary in size from tens of gigabytes to
+A company wants to migrate its on-premises application to AWS. The application produces output files that vary in size from tens of gigabytes to
 hundreds of terabytes. The application data must be stored in a standard le system structure. The company wants a solution that scales
 automatically. is highly available, and requires minimum operational overhead.
 Which solution will meet these requirements?
@@ -810,11 +810,11 @@ S3 Object Lock in governance mode for a period of 10 years.
 
 A company runs multiple Windows workloads on AWS. The company's employees use Windows le shares that are hosted on two Amazon EC
 instances. The le shares synchronize data between themselves and maintain duplicate copies. The company wants a highly available and
-durable storage solution that preserves how users currently access the les.
+durable storage solution that preserves how users currently access the files.
 What should a solutions architect do to meet these requirements?
 
 ```
-A. Migrate all the data to Amazon S3. Set up IAM authentication for users to access les.
+A. Migrate all the data to Amazon S3. Set up IAM authentication for users to access files.
 B. Set up an Amazon S3 File Gateway. Mount the S3 File Gateway on the existing EC2 instances.
 C. Extend the le share environment to Amazon FSx for Windows File Server with a Multi-AZ conguration. Migrate all the data to FSx for
 Windows File Server.
@@ -948,22 +948,22 @@ CloudWatch Events) to send a notication when the certicate is nearing expiration
 ```
 
 A company runs its infrastructure on AWS and has a registered base of 700,000 users for its document management application. The company
-intends to create a product that converts large .pdf les to .jpg image les. The .pdf les average 5 MB in size. The company needs to store the
-original les and the converted les. A solutions architect must design a scalable solution to accommodate demand that will grow rapidly over
+intends to create a product that converts large .pdf files to .jpg image files. The .pdf files average 5 MB in size. The company needs to store the
+original files and the converted files. A solutions architect must design a scalable solution to accommodate demand that will grow rapidly over
 time.
 Which solution meets these requirements MOST cost-effectively?
 
 ```
-A. Save the .pdf les to Amazon S3. Congure an S3 PUT event to invoke an AWS Lambda function to convert the les to .jpg format and store
+A. Save the .pdf files to Amazon S3. Congure an S3 PUT event to invoke an AWS Lambda function to convert the files to .jpg format and store
 them back in Amazon S3.
-B. Save the .pdf les to Amazon DynamoDUse the DynamoDB Streams feature to invoke an AWS Lambda function to convert the les to .jpg
+B. Save the .pdf files to Amazon DynamoDUse the DynamoDB Streams feature to invoke an AWS Lambda function to convert the files to .jpg
 format and store them back in DynamoDB.
-C. Upload the .pdf les to an AWS Elastic Beanstalk application that includes Amazon EC2 instances, Amazon Elastic Block Store (Amazon
-EBS) storage, and an Auto Scaling group. Use a program in the EC2 instances to convert the les to .jpg format. Save the .pdf les and the .jpg
-les in the EBS store.
-D. Upload the .pdf les to an AWS Elastic Beanstalk application that includes Amazon EC2 instances, Amazon Elastic File System (Amazon
-EFS) storage, and an Auto Scaling group. Use a program in the EC2 instances to convert the le to .jpg format. Save the .pdf les and the .jpg
-les in the EBS store.
+C. Upload the .pdf files to an AWS Elastic Beanstalk application that includes Amazon EC2 instances, Amazon Elastic Block Store (Amazon
+EBS) storage, and an Auto Scaling group. Use a program in the EC2 instances to convert the files to .jpg format. Save the .pdf files and the .jpg
+files in the EBS store.
+D. Upload the .pdf files to an AWS Elastic Beanstalk application that includes Amazon EC2 instances, Amazon Elastic File System (Amazon
+EFS) storage, and an Auto Scaling group. Use a program in the EC2 instances to convert the le to .jpg format. Save the .pdf files and the .jpg
+files in the EBS store.
 ```
 Question #64 Topic 1
 
@@ -998,21 +998,21 @@ C. Use Amazon Textract to extract the text from the reports. Use Amazon Comprehe
 D. Use Amazon Rekognition to extract the text from the reports. Use Amazon Comprehend Medical to identify the PHI from the extracted text.
 ```
 
-A company has an application that generates a large number of les, each approximately 5 MB in size. The les are stored in Amazon S3.
-Company policy requires the les to be stored for 4 years before they can be deleted. Immediate accessibility is always required as the les
-contain critical business data that is not easy to reproduce. The les are frequently accessed in the rst 30 days of the object creation but are
+A company has an application that generates a large number of files, each approximately 5 MB in size. The files are stored in Amazon S3.
+Company policy requires the files to be stored for 4 years before they can be deleted. Immediate accessibility is always required as the files
+contain critical business data that is not easy to reproduce. The files are frequently accessed in the rst 30 days of the object creation but are
 rarely accessed after the rst 30 days.
 Which storage solution is MOST cost-effective?
 
 ```
-A. Create an S3 bucket lifecycle policy to move les from S3 Standard to S3 Glacier 30 days from object creation. Delete the les 4 years after
+A. Create an S3 bucket lifecycle policy to move files from S3 Standard to S3 Glacier 30 days from object creation. Delete the files 4 years after
 object creation.
-B. Create an S3 bucket lifecycle policy to move les from S3 Standard to S3 One Zone-Infrequent Access (S3 One Zone-IA) 30 days from
-object creation. Delete the les 4 years after object creation.
-C. Create an S3 bucket lifecycle policy to move les from S3 Standard to S3 Standard-Infrequent Access (S3 Standard-IA) 30 days from object
-creation. Delete the les 4 years after object creation.
-D. Create an S3 bucket lifecycle policy to move les from S3 Standard to S3 Standard-Infrequent Access (S3 Standard-IA) 30 days from object
-creation. Move the les to S3 Glacier 4 years after object creation.
+B. Create an S3 bucket lifecycle policy to move files from S3 Standard to S3 One Zone-Infrequent Access (S3 One Zone-IA) 30 days from
+object creation. Delete the files 4 years after object creation.
+C. Create an S3 bucket lifecycle policy to move files from S3 Standard to S3 Standard-Infrequent Access (S3 Standard-IA) 30 days from object
+creation. Delete the files 4 years after object creation.
+D. Create an S3 bucket lifecycle policy to move files from S3 Standard to S3 Standard-Infrequent Access (S3 Standard-IA) 30 days from object
+creation. Move the files to S3 Glacier 4 years after object creation.
 ```
 Question #67 Topic 1
 
@@ -1151,7 +1151,7 @@ Scaling group. Use Amazon CloudWatch to monitor the SQS queue length and scale u
 ```
 Question #76 Topic 1
 
-A company receives 10 TB of instrumentation data each day from several machines located at a single factory. The data consists of JSON les
+A company receives 10 TB of instrumentation data each day from several machines located at a single factory. The data consists of JSON files
 stored on a storage area network (SAN) in an on-premises data center located within the factory. The company wants to send this data to Amazon
 S3 where it can be accessed by several additional systems that provide critical near-real-time analytics. A secure transfer is important because
 the data is considered sensitive.
@@ -1314,8 +1314,8 @@ B. Store the database user credentials in AWS Systems Manager OpsCenter. Grant t
 access OpsCenter.
 C. Store the database user credentials in a secure Amazon S3 bucket. Grant the necessary IAM permissions to allow the web servers to
 retrieve credentials and access the database.
-D. Store the database user credentials in les encrypted with AWS Key Management Service (AWS KMS) on the web server le system. The
-web server should be able to decrypt the les and access the database.
+D. Store the database user credentials in files encrypted with AWS Key Management Service (AWS KMS) on the web server le system. The
+web server should be able to decrypt the files and access the database.
 ```
 Question #87 Topic 1
 
@@ -1421,14 +1421,14 @@ D. Use Amazon RDS for MySQL with a Multi-AZ deployment and read replicas for pro
 a backup and restore process that uses the mysqldump utility.
 ```
 
-A company is designing an application where users upload small les into Amazon S3. After a user uploads a le, the le requires one-time simple
+A company is designing an application where users upload small files into Amazon S3. After a user uploads a le, the le requires one-time simple
 processing to transform the data and save the data in JSON format for later analysis.
-Each le must be processed as quickly as possible after it is uploaded. Demand will vary. On some days, users will upload a high number of les.
-On other days, users will upload a few les or no les.
+Each le must be processed as quickly as possible after it is uploaded. Demand will vary. On some days, users will upload a high number of files.
+On other days, users will upload a few files or no files.
 Which solution meets these requirements with the LEAST operational overhead?
 
 ```
-A. Congure Amazon EMR to read text les from Amazon S3. Run processing scripts to transform the data. Store the resulting JSON le in an
+A. Congure Amazon EMR to read text files from Amazon S3. Run processing scripts to transform the data. Store the resulting JSON le in an
 Amazon Aurora DB cluster.
 B. Congure Amazon S3 to send an event notication to an Amazon Simple Queue Service (Amazon SQS) queue. Use Amazon EC2 instances
 to read from the queue and process the data. Store the resulting JSON le in Amazon DynamoDB.
@@ -1733,7 +1733,7 @@ D. Increase the number of EC2 instances to three. Use Provisioned IOPS SSD (io2)
 the photos and metadata.
 ```
 
-A medical records company is hosting an application on Amazon EC2 instances. The application processes customer data les that are stored on
+A medical records company is hosting an application on Amazon EC2 instances. The application processes customer data files that are stored on
 Amazon S3. The EC2 instances are hosted in public subnets. The EC2 instances access Amazon S3 over the internet, but they do not require any
 other network access.
 A new requirement mandates that the network trac for le transfers take a private route and not be sent over the internet.
@@ -1958,8 +1958,8 @@ D. Use scheduled scaling actions to scale up and scale down the Auto Scaling gro
 ```
 Question #131 Topic 1
 
-A company is developing a le-sharing application that will use an Amazon S3 bucket for storage. The company wants to serve all the les
-through an Amazon CloudFront distribution. The company does not want the les to be accessible through direct navigation to the S3 URL.
+A company is developing a le-sharing application that will use an Amazon S3 bucket for storage. The company wants to serve all the files
+through an Amazon CloudFront distribution. The company does not want the files to be accessible through direct navigation to the S3 URL.
 What should a solutions architect do to meet these requirements?
 
 ```
@@ -2075,18 +2075,18 @@ D. Create a Multi-AZ Auto Scaling group for EC2 instances that host the RabbitMQ
 instances that host the application. Create a third Multi-AZ Auto Scaling group for EC2 instances that host the PostgreSQL database
 ```
 
-A reporting team receives les each day in an Amazon S3 bucket. The reporting team manually reviews and copies the les from this initial S3
-bucket to an analysis S3 bucket each day at the same time to use with Amazon QuickSight. Additional teams are starting to send more les in
+A reporting team receives files each day in an Amazon S3 bucket. The reporting team manually reviews and copies the files from this initial S3
+bucket to an analysis S3 bucket each day at the same time to use with Amazon QuickSight. Additional teams are starting to send more files in
 larger sizes to the initial S3 bucket.
-The reporting team wants to move the les automatically analysis S3 bucket as the les enter the initial S3 bucket. The reporting team also wants
-to use AWS Lambda functions to run pattern-matching code on the copied data. In addition, the reporting team wants to send the data les to a
+The reporting team wants to move the files automatically analysis S3 bucket as the files enter the initial S3 bucket. The reporting team also wants
+to use AWS Lambda functions to run pattern-matching code on the copied data. In addition, the reporting team wants to send the data files to a
 pipeline in Amazon SageMaker Pipelines.
 What should a solutions architect do to meet these requirements with the LEAST operational overhead?
 
 ```
-A. Create a Lambda function to copy the les to the analysis S3 bucket. Create an S3 event notication for the analysis S3 bucket. Congure
+A. Create a Lambda function to copy the files to the analysis S3 bucket. Create an S3 event notication for the analysis S3 bucket. Congure
 Lambda and SageMaker Pipelines as destinations of the event notication. Congure s3:ObjectCreated:Put as the event type.
-B. Create a Lambda function to copy the les to the analysis S3 bucket. Congure the analysis S3 bucket to send event notications to
+B. Create a Lambda function to copy the files to the analysis S3 bucket. Congure the analysis S3 bucket to send event notications to
 Amazon EventBridge (Amazon CloudWatch Events). Congure an ObjectCreated rule in EventBridge (CloudWatch Events). Congure Lambda
 and SageMaker Pipelines as targets for the rule.
 C. Congure S3 replication between the S3 buckets. Create an S3 event notication for the analysis S3 bucket. Congure Lambda and
@@ -2206,7 +2206,7 @@ C. Use On-Demand Instances for the baseline level of usage. Use Spot Instances f
 D. Use Dedicated Instances for the baseline level of usage. Use On-Demand Instances for any additional capacity that the application needs.
 ```
 
-A company needs to retain application log les for a critical application for 10 years. The application team regularly accesses logs from the past
+A company needs to retain application log files for a critical application for 10 years. The application team regularly accesses logs from the past
 month for troubleshooting, but logs older than 1 month are rarely accessed. The application generates more than 10 TB of logs per month.
 Which storage option meets these requirements MOST cost-effectively?
 
@@ -2297,22 +2297,22 @@ D. Create AWS Lambda functions to start and stop the DB instance. Create Amazon 
 rules to invoke the Lambda functions. Congure the Lambda functions as event targets for the rules.
 ```
 
-A company sells ringtones created from clips of popular songs. The les containing the ringtones are stored in Amazon S3 Standard and are at
-least 128 KB in size. The company has millions of les, but downloads are infrequent for ringtones older than 90 days. The company needs to
-save money on storage while keeping the most accessed les readily available for its users.
+A company sells ringtones created from clips of popular songs. The files containing the ringtones are stored in Amazon S3 Standard and are at
+least 128 KB in size. The company has millions of files, but downloads are infrequent for ringtones older than 90 days. The company needs to
+save money on storage while keeping the most accessed files readily available for its users.
 Which action should the company take to meet these requirements MOST cost-effectively?
 
 ```
 A. Congure S3 Standard-Infrequent Access (S3 Standard-IA) storage for the initial storage tier of the objects.
-B. Move the les to S3 Intelligent-Tiering and congure it to move objects to a less expensive storage tier after 90 days.
+B. Move the files to S3 Intelligent-Tiering and congure it to move objects to a less expensive storage tier after 90 days.
 C. Congure S3 inventory to manage objects and move them to S3 Standard-Infrequent Access (S3 Standard-1A) after 90 days.
 D. Implement an S3 Lifecycle policy that moves the objects from S3 Standard to S3 Standard-Infrequent Access (S3 Standard-1A) after 90
 days.
 ```
 Question #154 Topic 1
 
-A company needs to save the results from a medical trial to an Amazon S3 repository. The repository must allow a few scientists to add new les
-and must restrict all other users to read-only access. No users can have the ability to modify or delete any les in the repository. The company
+A company needs to save the results from a medical trial to an Amazon S3 repository. The repository must allow a few scientists to add new files
+and must restrict all other users to read-only access. No users can have the ability to modify or delete any files in the repository. The company
 must keep every le in the repository for a minimum of 1 year after its creation date.
 Which solution will meet these requirements?
 
@@ -2325,8 +2325,8 @@ saved object so that modied objects can be marked accordingly.
 ```
 Question #155 Topic 1
 
-A large media company hosts a web application on AWS. The company wants to start caching condential media les so that users around the
-world will have reliable access to the les. The content is stored in Amazon S3 buckets. The company must deliver the content quickly, regardless
+A large media company hosts a web application on AWS. The company wants to start caching condential media files so that users around the
+world will have reliable access to the files. The content is stored in Amazon S3 buckets. The company must deliver the content quickly, regardless
 of where the requests originate geographically.
 Which solution will meet these requirements?
 
@@ -2429,12 +2429,12 @@ process the SQS messages. Store the results on an Amazon RDS DB instance.
 ```
 
 A company wants to use high performance computing (HPC) infrastructure on AWS for nancial risk modeling. The company’s HPC workloads run
-on Linux. Each HPC workow runs on hundreds of Amazon EC2 Spot Instances, is short-lived, and generates thousands of output les that are
+on Linux. Each HPC workow runs on hundreds of Amazon EC2 Spot Instances, is short-lived, and generates thousands of output files that are
 ultimately stored in persistent storage for analytics and long-term future use.
 
 The company seeks a cloud storage solution that permits the copying of on-premises data to long-term persistent storage to make data available
 for processing by all EC2 instances. The solution should also be a high performance le system that is integrated with persistent storage to read
-and write datasets and output les.
+and write datasets and output files.
 
 Which combination of AWS services meets these requirements?
 
@@ -2498,13 +2498,13 @@ on the distribution.
 Question #166 Topic 1
 
 Organizers for a global event want to put daily reports online as static HTML pages. The pages are expected to generate millions of views from
-users around the world. The les are stored in an Amazon S3 bucket. A solutions architect has been asked to design an ecient and effective
+users around the world. The files are stored in an Amazon S3 bucket. A solutions architect has been asked to design an ecient and effective
 solution.
 
 Which action should the solutions architect take to accomplish this?
 
 ```
-A. Generate presigned URLs for the les.
+A. Generate presigned URLs for the files.
 B. Use cross-Region replication to all Regions.
 C. Use the geoproximity feature of Amazon Route 53.
 D. Use Amazon CloudFront with the S3 bucket as its origin.
@@ -2595,7 +2595,7 @@ D. Congure CloudFront and set the Origin Protocol Policy setting to HTTPS Only f
 A gaming company hosts a browser-based application on AWS. The users of the application consume a large number of videos and images that
 are stored in Amazon S3. This content is the same for all users.
 
-The application has increased in popularity, and millions of users worldwide accessing these media les. The company wants to provide the les
+The application has increased in popularity, and millions of users worldwide accessing these media files. The company wants to provide the files
 to the users while reducing the load on the origin.
 
 Which solution meets these requirements MOST cost-effectively?
@@ -2822,7 +2822,7 @@ E. Create an Amazon Elastic Container Service (Amazon ECS) cluster with an Amazo
 ```
 Question #188 Topic 1
 
-A company uses Amazon S3 as its data lake. The company has a new partner that must use SFTP to upload data les. A solutions architect needs
+A company uses Amazon S3 as its data lake. The company has a new partner that must use SFTP to upload data files. A solutions architect needs
 to implement a highly available SFTP solution that minimizes operational overhead.
 
 Which solution will meet these requirements?
@@ -2832,10 +2832,10 @@ A. Use AWS Transfer Family to congure an SFTP-enabled server with a publicly acc
 destination.
 B. Use Amazon S3 File Gateway as an SFTP server. Expose the S3 File Gateway endpoint URL to the new partner. Share the S3 File Gateway
 endpoint with the new partner.
-C. Launch an Amazon EC2 instance in a private subnet in a VPInstruct the new partner to upload les to the EC2 instance by using a VPN. Run
-a cron job script, on the EC2 instance to upload les to the S3 data lake.
+C. Launch an Amazon EC2 instance in a private subnet in a VPInstruct the new partner to upload files to the EC2 instance by using a VPN. Run
+a cron job script, on the EC2 instance to upload files to the S3 data lake.
 D. Launch Amazon EC2 instances in a private subnet in a VPC. Place a Network Load Balancer (NLB) in front of the EC2 instances. Create an
-SFTP listener port for the NLB. Share the NLB hostname with the new partner. Run a cron job script on the EC2 instances to upload les to the
+SFTP listener port for the NLB. Share the NLB hostname with the new partner. Run a cron job script on the EC2 instances to upload files to the
 S3 data lake.
 ```
 
@@ -2896,7 +2896,7 @@ Which combination of steps should the solutions architect take to meet these req
 ```
 A. Write the document information to an Amazon EC2 instance that runs a MySQL database.
 B. Write the document information to an Amazon S3 bucket. Use Amazon Athena to query the data.
-C. Create an Auto Scaling group of Amazon EC2 instances to run a custom application that processes the scanned les and extracts the
+C. Create an Auto Scaling group of Amazon EC2 instances to run a custom application that processes the scanned files and extracts the
 medical information.
 D. Create an AWS Lambda function that runs when new documents are uploaded. Use Amazon Rekognition to convert the documents to raw
 text. Use Amazon Transcribe Medical to detect and extract relevant medical information from the text.
@@ -3004,18 +3004,18 @@ compatibility) for data storage.
 Question #199 Topic 1
 
 A telemarketing company is designing its customer call center functionality on AWS. The company needs a solution that provides multiple
-speaker recognition and generates transcript les. The company wants to query the transcript les to analyze the business patterns. The
-transcript les must be stored for 7 years for auditing purposes.
+speaker recognition and generates transcript files. The company wants to query the transcript files to analyze the business patterns. The
+transcript files must be stored for 7 years for auditing purposes.
 
 Which solution will meet these requirements?
 
 ```
-A. Use Amazon Rekognition for multiple speaker recognition. Store the transcript les in Amazon S3. Use machine learning models for
+A. Use Amazon Rekognition for multiple speaker recognition. Store the transcript files in Amazon S3. Use machine learning models for
 transcript le analysis.
 B. Use Amazon Transcribe for multiple speaker recognition. Use Amazon Athena for transcript le analysis.
-C. Use Amazon Translate for multiple speaker recognition. Store the transcript les in Amazon Redshift. Use SQL queries for transcript le
+C. Use Amazon Translate for multiple speaker recognition. Store the transcript files in Amazon Redshift. Use SQL queries for transcript le
 analysis.
-D. Use Amazon Rekognition for multiple speaker recognition. Store the transcript les in Amazon S3. Use Amazon Textract for transcript le
+D. Use Amazon Rekognition for multiple speaker recognition. Store the transcript files in Amazon S3. Use Amazon Textract for transcript le
 analysis.
 ```
 
@@ -3258,14 +3258,14 @@ ALB.
 ```
 Question #214 Topic 1
 
-A company’s reporting system delivers hundreds of .csv les to an Amazon S3 bucket each day. The company must convert these les to Apache
-Parquet format and must store the les in a transformed data bucket.
+A company’s reporting system delivers hundreds of .csv files to an Amazon S3 bucket each day. The company must convert these files to Apache
+Parquet format and must store the files in a transformed data bucket.
 
 Which solution will meet these requirements with the LEAST development effort?
 
 ```
 A. Create an Amazon EMR cluster with Apache Spark installed. Write a Spark application to transform the data. Use EMR File System (EMRFS)
-to write les to the transformed data bucket.
+to write files to the transformed data bucket.
 B. Create an AWS Glue crawler to discover the data. Create an AWS Glue extract, transform, and load (ETL) job to transform the data. Specify
 the transformed data bucket in the output step.
 C. Use AWS Batch to create a job denition with Bash syntax to transform the data and output the data to the transformed data bucket. Use
@@ -3282,12 +3282,12 @@ for data transfer.
 What should a solutions architect do to migrate and store the data at the LOWEST cost?
 
 ```
-A. Order AWS Snowball devices to transfer the data. Use a lifecycle policy to transition the les to Amazon S3 Glacier Deep Archive.
+A. Order AWS Snowball devices to transfer the data. Use a lifecycle policy to transition the files to Amazon S3 Glacier Deep Archive.
 B. Deploy a VPN connection between the data center and Amazon VPC. Use the AWS CLI to copy the data from on premises to Amazon S3
 Glacier.
-C. Provision a 500 Mbps AWS Direct Connect connection and transfer the data to Amazon S3. Use a lifecycle policy to transition the les to
+C. Provision a 500 Mbps AWS Direct Connect connection and transfer the data to Amazon S3. Use a lifecycle policy to transition the files to
 Amazon S3 Glacier Deep Archive.
-D. Use AWS DataSync to transfer the data and deploy a DataSync agent on premises. Use the DataSync task to copy les from the on-premises
+D. Use AWS DataSync to transfer the data and deploy a DataSync agent on premises. Use the DataSync task to copy files from the on-premises
 NAS storage to Amazon S3 Glacier.
 ```
 Question #216 Topic 1
@@ -3375,7 +3375,7 @@ D. A containerized service hosted in Amazon ECS with Amazon EC2
 Question #221 Topic 1
 
 A company runs an application on a group of Amazon Linux EC2 instances. For compliance reasons, the company must retain all application log
-les for 7 years. The log les will be analyzed by a reporting tool that must be able to access all the les concurrently.
+files for 7 years. The log files will be analyzed by a reporting tool that must be able to access all the files concurrently.
 
 Which storage solution meets these requirements MOST cost-effectively?
 
@@ -3618,7 +3618,7 @@ Amazon RDS Multi-AZ DB instance. Use Amazon S3 to store and serve users’ image
 ```
 Question #237 Topic 1
 
-An application running on an Amazon EC2 instance in VPC-A needs to access les in another EC2 instance in VPC-B. Both VPCs are in separate
+An application running on an Amazon EC2 instance in VPC-A needs to access files in another EC2 instance in VPC-B. Both VPCs are in separate
 AWS accounts. The network administrator needs to design a solution to congure secure access to EC2 instance in VPC-B from VPC-A. The
 connectivity should not have a single point of failure or bandwidth concerns.
 
@@ -3707,14 +3707,14 @@ D. Geolocation routing policy
 Question #243 Topic 1
 
 A medical research lab produces data that is related to a new study. The lab wants to make the data available with minimum latency to clinics
-across the country for their on-premises, le-based applications. The data les are stored in an Amazon S3 bucket that has read-only permissions
+across the country for their on-premises, le-based applications. The data files are stored in an Amazon S3 bucket that has read-only permissions
 for each clinic.
 
 What should a solutions architect recommend to meet these requirements?
 
 ```
 A. Deploy an AWS Storage Gateway le gateway as a virtual machine (VM) on premises at each clinic
-B. Migrate the les to each clinic’s on-premises applications by using AWS DataSync for processing.
+B. Migrate the files to each clinic’s on-premises applications by using AWS DataSync for processing.
 C. Deploy an AWS Storage Gateway volume gateway as a virtual machine (VM) on premises at each clinic.
 D. Attach an Amazon Elastic File System (Amazon EFS) le system to each clinic’s on-premises servers.
 ```
@@ -3842,10 +3842,10 @@ located. Congure the private subnet route table to use the internet gateway as t
 ```
 Question #252 Topic 1
 
-A solutions architect needs to design a system to store client case les. The les are core company assets and are important. The number of les
+A solutions architect needs to design a system to store client case files. The files are core company assets and are important. The number of files
 will grow over time.
 
-The les must be simultaneously accessible from multiple application servers that run on Amazon EC2 instances. The solution must have built-in
+The files must be simultaneously accessible from multiple application servers that run on Amazon EC2 instances. The solution must have built-in
 redundancy.
 
 Which solution meets these requirements?
@@ -3931,20 +3931,20 @@ D. Use a bootstrap script during the launch of an EC2 instance to install Amazon
 Auto Scaling status data and send the data to Amazon Kinesis Data Firehose. Store the data in Amazon S3.
 ```
 
-A company has an application that places hundreds of .csv les into an Amazon S3 bucket every hour. The les are 1 GB in size. Each time a le is
+A company has an application that places hundreds of .csv files into an Amazon S3 bucket every hour. The files are 1 GB in size. Each time a le is
 uploaded, the company needs to convert the le to Apache Parquet format and place the output le into an S3 bucket.
 
 Which solution will meet these requirements with the LEAST operational overhead?
 
 ```
-A. Create an AWS Lambda function to download the .csv les, convert the les to Parquet format, and place the output les in an S3 bucket.
+A. Create an AWS Lambda function to download the .csv files, convert the files to Parquet format, and place the output files in an S3 bucket.
 Invoke the Lambda function for each S3 PUT event.
-B. Create an Apache Spark job to read the .csv les, convert the les to Parquet format, and place the output les in an S3 bucket. Create an
+B. Create an Apache Spark job to read the .csv files, convert the files to Parquet format, and place the output files in an S3 bucket. Create an
 AWS Lambda function for each S3 PUT event to invoke the Spark job.
-C. Create an AWS Glue table and an AWS Glue crawler for the S3 bucket where the application places the .csv les. Schedule an AWS Lambda
+C. Create an AWS Glue table and an AWS Glue crawler for the S3 bucket where the application places the .csv files. Schedule an AWS Lambda
 function to periodically use Amazon Athena to query the AWS Glue table, convert the query results into Parquet format, and place the output
-les into an S3 bucket.
-D. Create an AWS Glue extract, transform, and load (ETL) job to convert the .csv les to Parquet format and place the output les into an S3
+files into an S3 bucket.
+D. Create an AWS Glue extract, transform, and load (ETL) job to convert the .csv files to Parquet format and place the output files into an S3
 bucket. Create an AWS Lambda function for each S3 PUT event to invoke the ETL job.
 ```
 Question #259 Topic 1
@@ -3967,10 +3967,10 @@ years.
 Question #260 Topic 1
 
 A company’s compliance team needs to move its le shares to AWS. The shares run on a Windows Server SMB le share. A self-managed on-
-premises Active Directory controls access to the les and folders.
+premises Active Directory controls access to the files and folders.
 
 The company wants to use Amazon FSx for Windows File Server as part of the solution. The company must ensure that the on-premises Active
-Directory groups restrict access to the FSx for Windows File Server SMB compliance shares, folders, and les after the move to AWS. The
+Directory groups restrict access to the FSx for Windows File Server SMB compliance shares, folders, and files after the move to AWS. The
 company has created an FSx for Windows File Server le system.
 
 Which solution will meet these requirements?
@@ -4247,11 +4247,11 @@ the video content for processing. As the popularity of the service has grown ove
 Which storage solution is MOST cost-effective?
 
 ```
-A. Use AWS Storage Gateway for les to store and process the video content.
+A. Use AWS Storage Gateway for files to store and process the video content.
 B. Use AWS Storage Gateway for volumes to store and process the video content.
-C. Use Amazon EFS for storing the video content. Once processing is complete, transfer the les to Amazon Elastic Block Store (Amazon
+C. Use Amazon EFS for storing the video content. Once processing is complete, transfer the files to Amazon Elastic Block Store (Amazon
 EBS).
-D. Use Amazon S3 for storing the video content. Move the les temporarily over to an Amazon Elastic Block Store (Amazon EBS) volume
+D. Use Amazon S3 for storing the video content. Move the files temporarily over to an Amazon Elastic Block Store (Amazon EBS) volume
 attached to the server for processing.
 ```
 
@@ -4399,7 +4399,7 @@ D. Use AWS Certicate Manager (ACM) to validate the website’s SSL certicate.
 
 A company wants to migrate a Windows-based application from on premises to the AWS Cloud. The application has three tiers: an application tier,
 a business tier, and a database tier with Microsoft SQL Server. The company wants to use specic features of SQL Server such as native backups
-and Data Quality Services. The company also needs to share les for processing between the tiers.
+and Data Quality Services. The company also needs to share files for processing between the tiers.
 
 How should a solutions architect design the architecture to meet these requirements?
 
@@ -4413,7 +4413,7 @@ SSD (io2) Amazon Elastic Block Store (Amazon EBS) volume for le sharing between 
 ```
 Question #288 Topic 1
 
-A company is migrating a Linux-based web server group to AWS. The web servers must access les in a shared le store for some content. The
+A company is migrating a Linux-based web server group to AWS. The web servers must access files in a shared le store for some content. The
 company must not make any changes to the application.
 
 What should a solutions architect do to meet these requirements?
@@ -4647,10 +4647,10 @@ Which combination of solutions will meet these requirements? (Choose two.)
 
 ```
 A. Deploy Amazon CloudFront for content delivery and caching.
-B. Use AWS DataSync to replicate the video les across AW'S Regions in other S3 buckets.
-C. Use Amazon Elastic Transcoder to convert the video les to more appropriate formats.
+B. Use AWS DataSync to replicate the video files across AW'S Regions in other S3 buckets.
+C. Use Amazon Elastic Transcoder to convert the video files to more appropriate formats.
 D. Deploy an Auto Sealing group of Amazon EC2 instances in Local Zones for content delivery and caching.
-E. Deploy an Auto Scaling group of Amazon EC2 instances to convert the video les to more appropriate formats.
+E. Deploy an Auto Scaling group of Amazon EC2 instances to convert the video files to more appropriate formats.
 ```
 Question #303 Topic 1
 
@@ -4758,9 +4758,9 @@ CloudWatch Logs.
 ```
 
 A company sells datasets to customers who do research in articial intelligence and machine learning (AI/ML). The datasets are large, formatted
-les that are stored in an Amazon S3 bucket in the us-east-1 Region. The company hosts a web application that the customers use to purchase
+files that are stored in an Amazon S3 bucket in the us-east-1 Region. The company hosts a web application that the customers use to purchase
 access to a given dataset. The web application is deployed on multiple Amazon EC2 instances behind an Application Load Balancer. After a
-purchase is made, customers receive an S3 signed URL that allows access to the les.
+purchase is made, customers receive an S3 signed URL that allows access to the files.
 
 The customers are distributed across North America and Europe. The company wants to reduce the cost that is associated with data transfers
 and wants to maintain or improve performance.
@@ -4875,7 +4875,7 @@ Question #317 Topic 1
 
 A company uses a legacy application to produce data in CSV format. The legacy application stores the output data in Amazon S3. The company is
 deploying a new commercial off-the-shelf (COTS) application that can perform complex SQL queries to analyze data that is stored in Amazon
-Redshift and Amazon S3 only. However, the COTS application cannot process the .csv les that the legacy application produces.
+Redshift and Amazon S3 only. However, the COTS application cannot process the .csv files that the legacy application produces.
 
 The company cannot update the legacy application to produce data in another format. The company needs to implement a solution so that the
 COTS application can use the data that the legacy application produces.
@@ -4883,14 +4883,14 @@ COTS application can use the data that the legacy application produces.
 Which solution will meet these requirements with the LEAST operational overhead?
 
 ```
-A. Create an AWS Glue extract, transform, and load (ETL) job that runs on a schedule. Congure the ETL job to process the .csv les and store
+A. Create an AWS Glue extract, transform, and load (ETL) job that runs on a schedule. Congure the ETL job to process the .csv files and store
 the processed data in Amazon Redshift.
-B. Develop a Python script that runs on Amazon EC2 instances to convert the .csv les to .sql les. Invoke the Python script on a cron
-schedule to store the output les in Amazon S3.
+B. Develop a Python script that runs on Amazon EC2 instances to convert the .csv files to .sql files. Invoke the Python script on a cron
+schedule to store the output files in Amazon S3.
 C. Create an AWS Lambda function and an Amazon DynamoDB table. Use an S3 event to invoke the Lambda function. Congure the Lambda
-function to perform an extract, transform, and load (ETL) job to process the .csv les and store the processed data in the DynamoDB table.
+function to perform an extract, transform, and load (ETL) job to process the .csv files and store the processed data in the DynamoDB table.
 D. Use Amazon EventBridge to launch an Amazon EMR cluster on a weekly schedule. Congure the EMR cluster to perform an extract,
-transform, and load (ETL) job to process the .csv les and store the processed data in an Amazon Redshift table.
+transform, and load (ETL) job to process the .csv files and store the processed data in an Amazon Redshift table.
 ```
 
 A company recently migrated its entire IT environment to the AWS Cloud. The company discovers that users are provisioning oversized Amazon
@@ -4998,17 +4998,17 @@ Which solution will meet these requirements with the LEAST amount of change to t
 
 ```
 A. Provision an Amazon S3 File Gateway as a virtual machine (VM) that is hosted on premises. Set the local cache to 10 TB. Modify existing
-applications to access the les through the NFS protocol. To recover from a disaster, provision an Amazon EC2 instance and mount the S3
-bucket that contains the les.
+applications to access the files through the NFS protocol. To recover from a disaster, provision an Amazon EC2 instance and mount the S3
+bucket that contains the files.
 B. Provision an AWS Storage Gateway tape gateway. Use a data backup solution to back up all existing data to a virtual tape library. Congure
 the data backup solution to run nightly after the initial backup is complete. To recover from a disaster, provision an Amazon EC2 instance and
 restore the data to an Amazon Elastic Block Store (Amazon EBS) volume from the volumes in the virtual tape library.
 C. Provision an AWS Storage Gateway Volume Gateway cached volume. Set the local cache to 10 TB. Mount the Volume Gateway cached
-volume to the existing le server by using iSCSI, and copy all les to the storage volume. Congure scheduled snapshots of the storage
+volume to the existing le server by using iSCSI, and copy all files to the storage volume. Congure scheduled snapshots of the storage
 volume. To recover from a disaster, restore a snapshot to an Amazon Elastic Block Store (Amazon EBS) volume and attach the EBS volume to
 an Amazon EC2 instance.
 D. Provision an AWS Storage Gateway Volume Gateway stored volume with the same amount of disk space as the existing le storage volume.
-Mount the Volume Gateway stored volume to the existing le server by using iSCSI, and copy all les to the storage volume. Congure
+Mount the Volume Gateway stored volume to the existing le server by using iSCSI, and copy all files to the storage volume. Congure
 scheduled snapshots of the storage volume. To recover from a disaster, restore a snapshot to an Amazon Elastic Block Store (Amazon EBS)
 volume and attach the EBS volume to an Amazon EC2 instance.
 ```
@@ -5126,20 +5126,20 @@ D. Use Amazon S3 Transfer Acceleration.
 ```
 Question #332 Topic 1
 
-A company needs to provide its employees with secure access to condential and sensitive les. The company wants to ensure that the les can
-be accessed only by authorized users. The les must be downloaded securely to the employees’ devices.
+A company needs to provide its employees with secure access to condential and sensitive files. The company wants to ensure that the files can
+be accessed only by authorized users. The files must be downloaded securely to the employees’ devices.
 
-The les are stored in an on-premises Windows le server. However, due to an increase in remote usage, the le server is running out of capacity.
+The files are stored in an on-premises Windows le server. However, due to an increase in remote usage, the le server is running out of capacity.
 .
 Which solution will meet these requirements?
 
 ```
 A. Migrate the le server to an Amazon EC2 instance in a public subnet. Congure the security group to limit inbound trac to the employees’
 IP addresses.
-B. Migrate the les to an Amazon FSx for Windows File Server le system. Integrate the Amazon FSx le system with the on-premises Active
+B. Migrate the files to an Amazon FSx for Windows File Server le system. Integrate the Amazon FSx le system with the on-premises Active
 Directory. Congure AWS Client VPN.
-C. Migrate the les to Amazon S3, and create a private VPC endpoint. Create a signed URL to allow download.
-D. Migrate the les to Amazon S3, and create a public VPC endpoint. Allow employees to sign on with AWS IAM Identity Center (AWS Single
+C. Migrate the files to Amazon S3, and create a private VPC endpoint. Create a signed URL to allow download.
+D. Migrate the files to Amazon S3, and create a public VPC endpoint. Allow employees to sign on with AWS IAM Identity Center (AWS Single
 Sign-On).
 ```
 Question #333 Topic 1
@@ -5158,8 +5158,8 @@ C. Congure an EC2 Auto Scaling scheduled scaling policy based on the monthly sch
 D. Congure Amazon ElastiCache to remove some of the workload from the EC2 instances.
 ```
 
-A company wants to give a customer the ability to use on-premises Microsoft Active Directory to download les that are stored in Amazon S3. The
-customer’s application uses an SFTP client to download the les.
+A company wants to give a customer the ability to use on-premises Microsoft Active Directory to download files that are stored in Amazon S3. The
+customer’s application uses an SFTP client to download the files.
 
 Which solution will meet these requirements with the LEAST operational overhead and no changes to the customer’s application?
 
@@ -5539,18 +5539,18 @@ D. Move the data objects to S3 One Zone-Infrequent Access (S3 One Zone-IA) immed
 
 A gaming company is moving its public scoreboard from a data center to the AWS Cloud. The company uses Amazon EC2 Windows Server
 instances behind an Application Load Balancer to host its dynamic application. The company needs a highly available storage solution for the
-application. The application consists of static les and dynamic server-side code.
+application. The application consists of static files and dynamic server-side code.
 
 Which combination of steps should a solutions architect take to meet these requirements? (Choose two.)
 
 ```
-A. Store the static les on Amazon S3. Use Amazon CloudFront to cache objects at the edge.
-B. Store the static les on Amazon S3. Use Amazon ElastiCache to cache objects at the edge.
-C. Store the server-side code on Amazon Elastic File System (Amazon EFS). Mount the EFS volume on each EC2 instance to share the les.
+A. Store the static files on Amazon S3. Use Amazon CloudFront to cache objects at the edge.
+B. Store the static files on Amazon S3. Use Amazon ElastiCache to cache objects at the edge.
+C. Store the server-side code on Amazon Elastic File System (Amazon EFS). Mount the EFS volume on each EC2 instance to share the files.
 D. Store the server-side code on Amazon FSx for Windows File Server. Mount the FSx for Windows File Server volume on each EC2 instance to
-share the les.
+share the files.
 E. Store the server-side code on a General Purpose SSD (gp2) Amazon Elastic Block Store (Amazon EBS) volume. Mount the EBS volume on
-each EC2 instance to share the les.
+each EC2 instance to share the files.
 ```
 Question #358 Topic 1
 
@@ -6119,19 +6119,19 @@ instance to allow inbound trac on port 3306 from 0.0.0.0/0.
 ```
 Question #393 Topic 1
 
-A payment processing company records all voice communication with its customers and stores the audio les in an Amazon S3 bucket. The
-company needs to capture the text from the audio les. The company must remove from the text any personally identiable information (PII) that
+A payment processing company records all voice communication with its customers and stores the audio files in an Amazon S3 bucket. The
+company needs to capture the text from the audio files. The company must remove from the text any personally identiable information (PII) that
 belongs to customers.
 
 What should a solutions architect do to meet these requirements?
 
 ```
-A. Process the audio les by using Amazon Kinesis Video Streams. Use an AWS Lambda function to scan for known PII patterns.
+A. Process the audio files by using Amazon Kinesis Video Streams. Use an AWS Lambda function to scan for known PII patterns.
 B. When an audio le is uploaded to the S3 bucket, invoke an AWS Lambda function to start an Amazon Textract task to analyze the call
 recordings.
 C. Congure an Amazon Transcribe transcription job with PII redaction turned on. When an audio le is uploaded to the S3 bucket, invoke an
 AWS Lambda function to start the transcription job. Store the output in a separate S3 bucket.
-D. Create an Amazon Connect contact ow that ingests the audio les with transcription turned on. Embed an AWS Lambda function to scan
+D. Create an Amazon Connect contact ow that ingests the audio files with transcription turned on. Embed an AWS Lambda function to scan
 for known PII patterns. Use Amazon EventBridge to start the contact ow when an audio le is uploaded to the S3 bucket.
 ```
 
@@ -6209,7 +6209,7 @@ upload speed of 100 Mbps.
 Which solution meets these requirements MOST cost-effectively?
 
 ```
-A. Use Amazon S3 multi-part upload functionality to transfer the les over HTTPS.
+A. Use Amazon S3 multi-part upload functionality to transfer the files over HTTPS.
 B. Create a VPN connection between the on-premises NAS system and the nearest AWS Region. Transfer the data over the VPN connection.
 C. Use the AWS Snow Family console to order several AWS Snowball Edge Storage Optimized devices. Use the devices to transfer the data to
 Amazon S3.
@@ -6288,7 +6288,7 @@ D. Turn on S3 Versioning within the S3 bucket to preserve every version of every
 ```
 Question #403 Topic 1
 
-A developer has an application that uses an AWS Lambda function to upload les to Amazon S3 and needs the required permissions to perform
+A developer has an application that uses an AWS Lambda function to upload files to Amazon S3 and needs the required permissions to perform
 the task. The developer already has an IAM user with valid IAM credentials required for Amazon S3.
 
 What should a solutions architect do to grant the permissions?
@@ -6463,10 +6463,10 @@ format. The company needs to store this data in the AWS Cloud in near-real time 
 Which solution will meet these requirements with the LEAST administrative overhead?
 
 ```
-A. Use AWS DataSync to transfer the les to Amazon S3. Create a scheduled task that runs at the end of each day.
+A. Use AWS DataSync to transfer the files to Amazon S3. Create a scheduled task that runs at the end of each day.
 B. Create an Amazon S3 File Gateway. Update the business system to use a new network share from the S3 File Gateway.
-C. Use AWS DataSync to transfer the les to Amazon S3. Create an application that uses the DataSync API in the automation workow.
-D. Deploy an AWS Transfer for SFTP endpoint. Create a script that checks for new les on the network share and uploads the new les by
+C. Use AWS DataSync to transfer the files to Amazon S3. Create an application that uses the DataSync API in the automation workow.
+D. Deploy an AWS Transfer for SFTP endpoint. Create a script that checks for new files on the network share and uploads the new files by
 using SFTP.
 ```
 Question #415 Topic 1
@@ -6721,25 +6721,25 @@ D. Group members are allowed the ec2:StopInstances and ec2:TerminateInstances pe
 with multi-factor authentication (MFA). Group members are permitted any other Amazon EC2 action within the us-east-1 Region.
 ```
 
-A manufacturing company has machine sensors that upload .csv les to an Amazon S3 bucket. These .csv les must be converted into images
+A manufacturing company has machine sensors that upload .csv files to an Amazon S3 bucket. These .csv files must be converted into images
 and must be made available as soon as possible for the automatic generation of graphical reports.
 
-The images become irrelevant after 1 month, but the .csv les must be kept to train machine learning (ML) models twice a year. The ML trainings
+The images become irrelevant after 1 month, but the .csv files must be kept to train machine learning (ML) models twice a year. The ML trainings
 and audits are planned weeks in advance.
 
 Which combination of steps will meet these requirements MOST cost-effectively? (Choose two.)
 
 ```
-A. Launch an Amazon EC2 Spot Instance that downloads the .csv les every hour, generates the image les, and uploads the images to the S3
+A. Launch an Amazon EC2 Spot Instance that downloads the .csv files every hour, generates the image files, and uploads the images to the S3
 bucket.
-B. Design an AWS Lambda function that converts the .csv les into images and stores the images in the S3 bucket. Invoke the Lambda
+B. Design an AWS Lambda function that converts the .csv files into images and stores the images in the S3 bucket. Invoke the Lambda
 function when a .csv le is uploaded.
-C. Create S3 Lifecycle rules for .csv les and image les in the S3 bucket. Transition the .csv les from S3 Standard to S3 Glacier 1 day after
-they are uploaded. Expire the image les after 30 days.
-D. Create S3 Lifecycle rules for .csv les and image les in the S3 bucket. Transition the .csv les from S3 Standard to S3 One Zone-Infrequent
-Access (S3 One Zone-IA) 1 day after they are uploaded. Expire the image les after 30 days.
-E. Create S3 Lifecycle rules for .csv les and image les in the S3 bucket. Transition the .csv les from S3 Standard to S3 Standard-Infrequent
-Access (S3 Standard-IA) 1 day after they are uploaded. Keep the image les in Reduced Redundancy Storage (RRS).
+C. Create S3 Lifecycle rules for .csv files and image files in the S3 bucket. Transition the .csv files from S3 Standard to S3 Glacier 1 day after
+they are uploaded. Expire the image files after 30 days.
+D. Create S3 Lifecycle rules for .csv files and image files in the S3 bucket. Transition the .csv files from S3 Standard to S3 One Zone-Infrequent
+Access (S3 One Zone-IA) 1 day after they are uploaded. Expire the image files after 30 days.
+E. Create S3 Lifecycle rules for .csv files and image files in the S3 bucket. Transition the .csv files from S3 Standard to S3 Standard-Infrequent
+Access (S3 Standard-IA) 1 day after they are uploaded. Keep the image files in Reduced Redundancy Storage (RRS).
 ```
 Question #431 Topic 1
 
@@ -6857,7 +6857,7 @@ What is the MOST secure way for the company to share the database with the audit
 
 ```
 A. Create a read replica of the database. Congure IAM standard database authentication to grant the auditor access.
-B. Export the database contents to text les. Store the les in an Amazon S3 bucket. Create a new IAM user for the auditor. Grant the user
+B. Export the database contents to text files. Store the files in an Amazon S3 bucket. Create a new IAM user for the auditor. Grant the user
 access to the S3 bucket.
 C. Copy a snapshot of the database to an Amazon S3 bucket. Create an IAM user. Share the user's keys with the auditor to grant access to the
 object in the S3 bucket.
@@ -7096,7 +7096,7 @@ D. Congure the existing schedule to stop the EC2 instance at the completion of t
 Question #453 Topic 1
 
 A company wants to implement a backup strategy for Amazon EC2 data and multiple Amazon S3 buckets. Because of regulatory requirements,
-the company must retain backup les for a specic time period. The company must not alter the les for the duration of the retention period.
+the company must retain backup files for a specic time period. The company must not alter the files for the duration of the retention period.
 
 Which solution will meet these requirements?
 
@@ -7399,9 +7399,9 @@ A company hosts a website on Amazon EC2 instances behind an Application Load Bal
 trac is increasing, and the company is concerned about a potential increase in cost.
 
 ```
-A. Create an Amazon CloudFront distribution to cache state les at edge locations
-B. Create an Amazon ElastiCache cluster. Connect the ALB to the ElastiCache cluster to serve cached les
-C. Create an AWS WAF web ACL and associate it with the ALB. Add a rule to the web ACL to cache static les
+A. Create an Amazon CloudFront distribution to cache state files at edge locations
+B. Create an Amazon ElastiCache cluster. Connect the ALB to the ElastiCache cluster to serve cached files
+C. Create an AWS WAF web ACL and associate it with the ALB. Add a rule to the web ACL to cache static files
 D. Create a second ALB in an alternative AWS Region. Route user trac to the closest Region to minimize data transfer costs
 ```
 Question #474 Topic 1
@@ -7463,19 +7463,19 @@ Which statement should a solutions architect add to the policy to correct bucket
 ## D.
 
 
-A law rm needs to share information with the public. The information includes hundreds of les that must be publicly readable. Modications or
-deletions of the les by anyone before a designated future date are prohibited.
+A law rm needs to share information with the public. The information includes hundreds of files that must be publicly readable. Modications or
+deletions of the files by anyone before a designated future date are prohibited.
 
 Which solution will meet these requirements in the MOST secure way?
 
 ```
-A. Upload all les to an Amazon S3 bucket that is congured for static website hosting. Grant read-only IAM permissions to any AWS
+A. Upload all files to an Amazon S3 bucket that is congured for static website hosting. Grant read-only IAM permissions to any AWS
 principals that access the S3 bucket until the designated date.
 B. Create a new Amazon S3 bucket with S3 Versioning enabled. Use S3 Object Lock with a retention period in accordance with the designated
 date. Congure the S3 bucket for static website hosting. Set an S3 bucket policy to allow read-only access to the objects.
 C. Create a new Amazon S3 bucket with S3 Versioning enabled. Congure an event trigger to run an AWS Lambda function in case of object
 modication or deletion. Congure the Lambda function to replace the objects with the original versions from a private S3 bucket.
-D. Upload all les to an Amazon S3 bucket that is congured for static website hosting. Select the folder that contains the les. Use S3 Object
+D. Upload all files to an Amazon S3 bucket that is congured for static website hosting. Select the folder that contains the files. Use S3 Object
 Lock with a retention period in accordance with the designated date. Grant read-only IAM permissions to any AWS principals that access the
 S3 bucket.
 ```
@@ -7575,7 +7575,7 @@ corporate directory service.
 Question #485 Topic 1
 
 A company is looking for a solution that can store video archives in AWS from old news footage. The company needs to minimize costs and will
-rarely need to restore these les. When the les are needed, they must be available in a maximum of ve minutes.
+rarely need to restore these files. When the files are needed, they must be available in a maximum of ve minutes.
 
 What is the MOST cost-effective solution?
 
@@ -7803,7 +7803,7 @@ D. Contact an AWS Direct Connect Partner to order a 200 Mbps hosted connection f
 ```
 Question #500 Topic 1
 
-A company has multiple Windows le servers on premises. The company wants to migrate and consolidate its les into an Amazon FSx for
+A company has multiple Windows le servers on premises. The company wants to migrate and consolidate its files into an Amazon FSx for
 Windows File Server le system. File permissions must be preserved to ensure that access rights do not change.
 
 Which solutions will meet these requirements? (Choose two.)
@@ -7905,10 +7905,10 @@ signicant increases in demand during large events and must ensure that the websi
 Which solution meets these requirements with the MOST scalability?
 
 ```
-A. Upload les from the user's browser to the application servers. Transfer the les to an Amazon S3 bucket.
-B. Provision an AWS Storage Gateway le gateway. Upload les directly from the user's browser to the le gateway.
-C. Generate Amazon S3 presigned URLs in the application. Upload les directly from the user's browser into an S3 bucket.
-D. Provision an Amazon Elastic File System (Amazon EFS) le system. Upload les directly from the user's browser to the le system.
+A. Upload files from the user's browser to the application servers. Transfer the files to an Amazon S3 bucket.
+B. Provision an AWS Storage Gateway le gateway. Upload files directly from the user's browser to the le gateway.
+C. Generate Amazon S3 presigned URLs in the application. Upload files directly from the user's browser into an S3 bucket.
+D. Provision an Amazon Elastic File System (Amazon EFS) le system. Upload files directly from the user's browser to the le system.
 ```
 Question #507 Topic 1
 
@@ -7959,7 +7959,7 @@ A company operates a two-tier application for image processing. The application 
 private subnet. An Application Load Balancer (ALB) for the web tier uses the public subnets. Amazon EC2 instances for the application tier use
 the private subnets.
 
-Users report that the application is running more slowly than expected. A security audit of the web server log les shows that the application is
+Users report that the application is running more slowly than expected. A security audit of the web server log files shows that the application is
 receiving millions of illegitimate requests from a small number of IP addresses. A solutions architect needs to resolve the immediate performance
 problem while the company investigates a more permanent solution.
 
@@ -8205,7 +8205,7 @@ Which solution will meet these requirements with the LEAST operational overhead?
 
 ```
 A. Access usage cost-related data by using the AWS Cost Explorer API with pagination.
-B. Access usage cost-related data by using downloadable AWS Cost Explorer report .csv les.
+B. Access usage cost-related data by using downloadable AWS Cost Explorer report .csv files.
 C. Congure AWS Budgets actions to send usage cost data to the company through FTP.
 D. Create AWS Budgets reports for usage cost data. Send the data to the company through SMTP.
 ```
@@ -8248,27 +8248,27 @@ secondary to primary as needed.
 ```
 Question #528 Topic 1
 
-A data analytics company wants to migrate its batch processing system to AWS. The company receives thousands of small data les periodically
-during the day through FTP. An on-premises batch job processes the data les overnight. However, the batch job takes hours to nish running.
+A data analytics company wants to migrate its batch processing system to AWS. The company receives thousands of small data files periodically
+during the day through FTP. An on-premises batch job processes the data files overnight. However, the batch job takes hours to nish running.
 
-The company wants the AWS solution to process incoming data les as soon as possible with minimal changes to the FTP clients that send the
-les. The solution must delete the incoming data les after the les have been processed successfully. Processing for each le needs to take 3-8
+The company wants the AWS solution to process incoming data files as soon as possible with minimal changes to the FTP clients that send the
+files. The solution must delete the incoming data files after the files have been processed successfully. Processing for each le needs to take 3-8
 minutes.
 
 Which solution will meet these requirements in the MOST operationally ecient way?
 
 ```
-A. Use an Amazon EC2 instance that runs an FTP server to store incoming les as objects in Amazon S3 Glacier Flexible Retrieval. Congure a
+A. Use an Amazon EC2 instance that runs an FTP server to store incoming files as objects in Amazon S3 Glacier Flexible Retrieval. Congure a
 job queue in AWS Batch. Use Amazon EventBridge rules to invoke the job to process the objects nightly from S3 Glacier Flexible Retrieval.
 Delete the objects after the job has processed the objects.
-B. Use an Amazon EC2 instance that runs an FTP server to store incoming les on an Amazon Elastic Block Store (Amazon EBS) volume.
-Congure a job queue in AWS Batch. Use Amazon EventBridge rules to invoke the job to process the les nightly from the EBS volume. Delete
-the les after the job has processed the les.
-C. Use AWS Transfer Family to create an FTP server to store incoming les on an Amazon Elastic Block Store (Amazon EBS) volume.
+B. Use an Amazon EC2 instance that runs an FTP server to store incoming files on an Amazon Elastic Block Store (Amazon EBS) volume.
+Congure a job queue in AWS Batch. Use Amazon EventBridge rules to invoke the job to process the files nightly from the EBS volume. Delete
+the files after the job has processed the files.
+C. Use AWS Transfer Family to create an FTP server to store incoming files on an Amazon Elastic Block Store (Amazon EBS) volume.
 Congure a job queue in AWS Batch. Use an Amazon S3 event notication when each le arrives to invoke the job in AWS Batch. Delete the
-les after the job has processed the les.
-D. Use AWS Transfer Family to create an FTP server to store incoming les in Amazon S3 Standard. Create an AWS Lambda function to
-process the les and to delete the les after they are processed. Use an S3 event notication to invoke the Lambda function when the les
+files after the job has processed the files.
+D. Use AWS Transfer Family to create an FTP server to store incoming files in Amazon S3 Standard. Create an AWS Lambda function to
+process the files and to delete the files after they are processed. Use an S3 event notication to invoke the Lambda function when the files
 arrive.
 ```
 
@@ -9247,7 +9247,7 @@ Which solution will meet these requirements?
 
 ```
 A. Use Multi-AZ Redis replication groups with shards that contain multiple nodes.
-B. Use Redis shards that contain multiple nodes with Redis append only les (AOF) turned on.
+B. Use Redis shards that contain multiple nodes with Redis append only files (AOF) turned on.
 C. Use a Multi-AZ Redis cluster with more than one read replica in the replication group.
 D. Use Redis shards that contain multiple nodes with Auto Scaling turned on.
 ```
@@ -9307,7 +9307,7 @@ D. Increase the Lambda function memory.
 Question #598 Topic 1
 
 A research company uses on-premises devices to generate data for analysis. The company wants to use the AWS Cloud to analyze the data. The
-devices generate .csv les and support writing the data to an SMB le share. Company analysts must be able to use SQL commands to query the
+devices generate .csv files and support writing the data to an SMB le share. Company analysts must be able to use SQL commands to query the
 data. The analysts will run queries periodically throughout the day.
 
 Which combination of steps will meet these requirements MOST cost-effectively? (Choose three.)
@@ -9386,7 +9386,7 @@ Machine Images (AMIs). Create another Lambda function to perform the restores wi
 Question #603 Topic 1
 
 A company recently migrated to the AWS Cloud. The company wants a serverless solution for large-scale parallel on-demand processing of a
-semistructured dataset. The data consists of logs, media les, sales transactions, and IoT sensor data that is stored in Amazon S3. The company
+semistructured dataset. The data consists of logs, media files, sales transactions, and IoT sensor data that is stored in Amazon S3. The company
 wants the solution to process thousands of items in the dataset in parallel.
 
 Which solution will meet these requirements with the MOST operational eciency?
@@ -9771,12 +9771,12 @@ two servers.
 What should a solutions architect recommend to meet these requirements?
 
 ```
-A. Create 200 new hosted zones in the Amazon Route 53 console Import zone les.
+A. Create 200 new hosted zones in the Amazon Route 53 console Import zone files.
 B. Launch a single large Amazon EC2 instance Import zone tiles. Congure Amazon CloudWatch alarms and notications to alert the company
 about any downtime.
 C. Migrate the servers to AWS by using AWS Server Migration Service (AWS SMS). Congure Amazon CloudWatch alarms and notications to
 alert the company about any downtime.
-D. Launch an Amazon EC2 instance in an Auto Scaling group across two Availability Zones. Import zone les. Set the desired capacity to 1 and
+D. Launch an Amazon EC2 instance in an Auto Scaling group across two Availability Zones. Import zone files. Set the desired capacity to 1 and
 the maximum capacity to 3 for the Auto Scaling group. Congure scaling alarms to scale based on CPU utilization.
 ```
 
@@ -9896,7 +9896,7 @@ Region.
 ```
 Question #636 Topic 1
 
-A development team is creating an event-based application that uses AWS Lambda functions. Events will be generated when les are added to an
+A development team is creating an event-based application that uses AWS Lambda functions. Events will be generated when files are added to an
 Amazon S3 bucket. The development team currently has Amazon Simple Notication Service (Amazon SNS) congured as the event target from
 Amazon S3.
 
@@ -9957,7 +9957,7 @@ C. Increase the number of EC2 instances in each Availability Zone
 D. Adjust the frequency of the health checks on the ALB's target group
 ```
 
-A company has an application workow that uses an AWS Lambda function to download and decrypt les from Amazon S3. These les are
+A company has an application workow that uses an AWS Lambda function to download and decrypt files from Amazon S3. These files are
 encrypted using AWS Key Management Service (AWS KMS) keys. A solutions architect needs to design a solution that will ensure the required
 permissions are set correctly.
 
@@ -10117,7 +10117,7 @@ D. Migrate to Amazon Aurora MySQL. Use Aurora read replicas for reporting purpos
 ```
 Question #651 Topic 1
 
-A company stores a large volume of image les in an Amazon S3 bucket. The images need to be readily available for the rst 180 days. The
+A company stores a large volume of image files in an Amazon S3 bucket. The images need to be readily available for the rst 180 days. The
 images are infrequently accessed for the next 180 days. After 360 days, the images need to be archived but must be available instantly upon
 request. After 5 years, only auditors can access the images. The auditors must be able to retrieve the images within 12 hours. The images cannot
 be lost during this process.
@@ -10466,8 +10466,8 @@ C. Create external tables in a Hive metastore. Congure Spark jobs in Amazon EMR 
 D. Congure an AWS Glue crawler to crawl the data. Congure Amazon Kinesis Data Analytics to use SQL to query the data.
 ```
 
-A company runs an SMB le server in its data center. The le server stores large les that the company frequently accesses for up to 7 days after
-the le creation date. After 7 days, the company needs to be able to access the les with a maximum retrieval time of 24 hours.
+A company runs an SMB le server in its data center. The le server stores large files that the company frequently accesses for up to 7 days after
+the le creation date. After 7 days, the company needs to be able to access the files with a maximum retrieval time of 24 hours.
 
 Which solution will meet these requirements?
 
@@ -10578,8 +10578,8 @@ F. Congure the backup solution to tag the objects with a 30-day retention period
 ```
 Question #680 Topic 1
 
-A solutions architect needs to copy les from an Amazon S3 bucket to an Amazon Elastic File System (Amazon EFS) le system and another S3
-bucket. The les must be copied continuously. New les are added to the original S3 bucket consistently. The copied les should be overwritten
+A solutions architect needs to copy files from an Amazon S3 bucket to an Amazon Elastic File System (Amazon EFS) le system and another S3
+bucket. The files must be copied continuously. New files are added to the original S3 bucket consistently. The copied files should be overwritten
 only if the source le changes.
 
 Which solution will meet these requirements with the LEAST operational overhead?
@@ -10587,8 +10587,8 @@ Which solution will meet these requirements with the LEAST operational overhead?
 ```
 A. Create an AWS DataSync location for both the destination S3 bucket and the EFS le system. Create a task for the destination S3 bucket
 and the EFS le system. Set the transfer mode to transfer only data that has changed.
-B. Create an AWS Lambda function. Mount the le system to the function. Set up an S3 event notication to invoke the function when les are
-created and changed in Amazon S3. Congure the function to copy les to the le system and the destination S3 bucket.
+B. Create an AWS Lambda function. Mount the le system to the function. Set up an S3 event notication to invoke the function when files are
+created and changed in Amazon S3. Congure the function to copy files to the le system and the destination S3 bucket.
 C. Create an AWS DataSync location for both the destination S3 bucket and the EFS le system. Create a task for the destination S3 bucket
 and the EFS le system. Set the transfer mode to transfer all data.
 D. Launch an Amazon EC2 instance in the same VPC as the le system. Mount the le system. Create a script to routinely synchronize all
