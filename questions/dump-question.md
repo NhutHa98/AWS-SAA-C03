@@ -997,6 +997,7 @@ B. Use Amazon Textract to extract the text from the reports. Use Amazon SageMake
 C. Use Amazon Textract to extract the text from the reports. Use Amazon Comprehend Medical to identify the PHI from the extracted text.
 D. Use Amazon Rekognition to extract the text from the reports. Use Amazon Comprehend Medical to identify the PHI from the extracted text.
 ```
+Question #66 Topic 1
 
 A company has an application that generates a large number of files, each approximately 5 MB in size. The files are stored in Amazon S3.
 Company policy requires the files to be stored for 4 years before they can be deleted. Immediate accessibility is always required as the files
