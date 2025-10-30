@@ -899,6 +899,7 @@ Lambda function to process the data for analysis.
 D. Collect the data from Amazon Kinesis Data Streams. Use Amazon Kinesis Data Firehose to transmit the data to an Amazon S3 data lake.
 Load the data in Amazon Redshift for analysis.
 ```
+Question #60 Topic 1
 
 A company has a website hosted on AWS. The website is behind an Application Load Balancer (ALB) that is congured to handle HTTP and
 HTTPS separately. The company wants to forward all requests to the website so that the requests will use HTTPS.
