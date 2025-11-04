@@ -32,54 +32,90 @@ Internet → CloudFront → WAF → ALB → Auto Scaling Group (EC2)
 
 **Detailed Components**:
 
-1. **Global Distribution**:
-   - **CloudFront** với multiple origins (ALB, S3)
-   - **Route 53** với latency-based routing
-   - **Edge locations** tại US, Europe, Asia
 
-2. **Web Tier**:
-   - **ALB** across 3 AZs
-   - **Auto Scaling Group** với target tracking (CPU 70%)
-   - **EC2 instances** t3.medium (burstable performance)
-   - **Security Groups** chỉ allow HTTP/HTTPS từ ALB
+---
 
-3. **Application Tier**:
-   - **Private subnets** trong 3 AZs
-   - **Application Load Balancer** internal cho microservices
-   - **ECS Fargate** cho containerized services
-   - **Lambda** cho event processing (orders, notifications)
+### **1. Global Distribution**
 
-4. **Database Tier**:
-   - **RDS MySQL** Multi-AZ trong private subnets
-   - **Read Replicas** cho read scaling
-   - **ElastiCache Redis** cluster mode cho session store
-   - **DynamoDB** cho shopping cart (session data)
+* **Amazon CloudFront** với multiple origins (**ALB, S3**) để cache nội dung tĩnh, giảm tải và tăng tốc độ truy cập toàn cầu.
+* **Amazon Route 53** với **latency-based routing** hoặc **geolocation routing** để phân phối traffic đến Region gần nhất.
+* **AWS Global Accelerator** cung cấp **một cặp IP anycast tĩnh toàn cầu**, tự động định tuyến người dùng đến **Region gần nhất và khỏe nhất**, đảm bảo **hiệu năng thấp & failover nhanh hơn DNS TTL**.
+* **Edge Locations** và **Regional Edge Caches** tại US, Europe, Asia giúp giảm độ trễ, cải thiện trải nghiệm người dùng.
+* **Failover routing** với Route 53 health checks để đảm bảo ứng dụng luôn khả dụng khi một Region gặp sự cố.
 
-5. **Storage**:
-   - **S3** cho product images, static assets
-   - **S3 Intelligent Tiering** cho cost optimization
-   - **EBS gp3** cho EC2 instances
-   - **EFS** cho shared application files
+---
 
-6. **Security**:
-   - **WAF** với rules cho OWASP Top 10
-   - **SSL termination** tại ALB
-   - **KMS encryption** cho RDS và S3
-   - **VPC Flow Logs** cho network monitoring
-   - **GuardDuty** cho threat detection
+### **2. Web Tier**
 
-7. **Monitoring & Logging**:
-   - **CloudWatch** metrics và alarms
-   - **CloudTrail** cho API auditing
-   - **Application Insights** cho performance monitoring
-   - **X-Ray** cho distributed tracing
+* **Application Load Balancer (ALB)** across **3 Availability Zones** để tăng độ sẵn sàng.
+* **Auto Scaling Group (ASG)** với **target tracking (CPU 70%)** để co giãn linh hoạt theo tải.
+* **EC2 instances** loại **t3.medium** (burstable performance, chi phí thấp).
+* **Security Groups** chỉ cho phép HTTP/HTTPS đến từ **ALB**.
+* **Elastic IP hoặc Global Accelerator endpoint** cho external access ổn định.
+
+---
+
+### **3. Application Tier**
+
+* **Private subnets** trong **3 AZs** để cách ly và bảo mật.
+* **Internal ALB** dùng cho **service-to-service communication** giữa microservices.
+* **ECS Fargate** chạy containerized workloads, không cần quản lý server.
+* **AWS Lambda** xử lý sự kiện (orders, notifications, background jobs).
+* **Amazon SQS + EventBridge, SNS** cho kiến trúc event-driven, đảm bảo decoupling.
+* **AWS AppConfig / Parameter Store** cho dynamic configuration management.
+
+---
+
+### **4. Database Tier**
+
+* **Amazon RDS MySQL** Multi-AZ trong private subnets để đảm bảo tính sẵn sàng và sao lưu tự động.
+* **Read Replicas** cho **read scaling** và giảm tải read trên primary.
+* **ElastiCache Redis** (cluster mode enabled) làm session store và caching layer.
+* **Amazon DynamoDB** cho **shopping cart, session, và high-performance key-value data**.
+* **AWS Backup** và **Point-in-Time Recovery (PITR)** cho RDS & DynamoDB để khôi phục dữ liệu.
+
+---
+
+### **5. Storage**
+
+* **Amazon S3** cho product images, static assets và log storage.
+* **S3 Intelligent Tiering** cho cost optimization dựa trên tần suất truy cập.
+* **EBS gp3** volumes cho EC2, cân bằng hiệu năng và chi phí.
+* **Amazon EFS** (cross-AZ mount targets) cho shared file systems giữa container và EC2.
+* **S3 Lifecycle Policies** cho log archiving & retention (e.g., chuyển sang Glacier).
+
+---
+
+### **6. Security**
+
+* **AWS WAF** với managed rules (OWASP Top 10, IP reputation lists).
+* **SSL/TLS termination** tại **ALB** hoặc **CloudFront**.
+* **AWS KMS** mã hoá dữ liệu ở rest cho RDS, S3, EBS, và EFS.
+* **VPC Flow Logs** để theo dõi lưu lượng mạng.
+* **AWS GuardDuty** phát hiện mối đe dọa.
+* **IAM Roles & Policies** theo principle of least privilege.
+* **AWS Shield Standard/Advanced** bảo vệ chống DDoS.
+
+---
+
+### **7. Monitoring & Logging**
+
+* **Amazon CloudWatch** cho metrics, alarms, và dashboards.
+* **AWS CloudTrail** ghi lại toàn bộ API calls (auditing & compliance).
+* **Application Insights** theo dõi hiệu năng ứng dụng.
+* **AWS X-Ray** cho distributed tracing.
+* **Centralized Logging** qua **CloudWatch Logs**, **Kinesis Firehose**, hoặc **OpenSearch**.
+
+---
 
 ### **Cost Optimization Strategy**
-- **Reserved Instances** cho baseline capacity (40% workload)
-- **Spot Instances** cho batch processing (image resize, reports)
-- **Auto Scaling** cho variable traffic
-- **S3 Lifecycle policies** cho log retention
-- **CloudWatch cost monitoring** với budgets
+
+* **Reserved Instances / Savings Plans** cho 40% baseline workload.
+* **Spot Instances** cho batch jobs (image resize, analytics, reporting).
+* **Auto Scaling** để xử lý variable traffic patterns.
+* **S3 Lifecycle Policies** giảm chi phí lưu trữ lâu dài.
+* **CloudWatch Budgets / Cost Explorer** để theo dõi và cảnh báo chi phí.
+* **Compute Optimizer** để gợi ý tối ưu instance type và kích thước.
 
 ### **Exam Questions Style**
 
