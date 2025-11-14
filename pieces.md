@@ -58,3 +58,9 @@ Amazon Elastic Block Store (EBS) – persistent block storage that remains avail
 | **Amazon FSx for Windows FS**  | SMB              | ❌          | ✅          | ✅       | Windows workloads                       |
 | **S3 File Gateway**            | Object (via NFS) | ⚠️ Partial | ✅          | ✅       | Archival, backup, low-write workloads   |
 | **Self-managed NFS/GlusterFS** | Custom           | ✅          | ✅ (manual) | ❌       | Custom control or hybrid setups         |
+
+
+
+⭐ A. Configure an S3 Gateway Endpoint — CORRECT
+
+An S3 Gateway VPC Endpoint lets your EC2 instances access S3 privately, through the AWS network, without using the internet, without NAT, and without a public IP.
