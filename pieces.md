@@ -64,3 +64,54 @@ Amazon Elastic Block Store (EBS) – persistent block storage that remains avail
 ⭐ A. Configure an S3 Gateway Endpoint — CORRECT
 
 An S3 Gateway VPC Endpoint lets your EC2 instances access S3 privately, through the AWS network, without using the internet, without NAT, and without a public IP.
+
+
+
+
+An egress-only internet gateway (EIGW) is an AWS gateway used only for IPv6 traffic that allows outbound connections from your VPC but blocks all inbound connections from the internet.
+
+🔥 NAT Instance vs NAT Gateway
+✅ NAT Gateway — Modern, recommended (managed service)
+❌ NAT Instance — Legacy, not recommended (self-managed)
+
+
+
+
+
+DataSYNC SF
+
+
+        On-Premises Data Center
+        ┌──────────────────────────┐
+        │                          │
+        │   SFTP Server (NFS)      │
+        │     200 GB of data       │
+        │                          │
+        │   +-------------------+   │
+        │   | DataSync Agent    |   │
+        │   +---------+---------+   │
+        └─────────────|─────────────┘
+                      |
+                      | Encrypted Transfer
+                      | over the Internet / VPN / DX
+                      v
+        ┌──────────────────────────┐
+        │          AWS             │
+        │                          │
+        │  +--------------------+  │
+        │  | AWS DataSync       |  │
+        │  |  (managed service) |  │
+        │  +---------+----------+  │
+        │            |             │
+        │            | writes data │
+        │            v             │
+        │   +-------------------+  │
+        │   | Amazon EFS        |  │
+        │   +---------+---------+  │
+        │             | mount       │
+        │             v             │
+        │   +-------------------+   │
+        │   | EC2 SFTP Server   |   │
+        │   | (mounts EFS)      |   │
+        │   +-------------------+   │
+        └──────────────────────────┘
