@@ -43,9 +43,8 @@
 * **Systems Manager** → **quản lý & vận hành**, patch, remote command.
 
 
-
-
 **Đề thi hay hỏi:** "Xác định ai đã xóa S3 bucket → dùng gì?"
+
 
 ---
 
