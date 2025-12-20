@@ -4,7 +4,7 @@
     ➡️ Secure static content by forcing users to access S3 only through CloudFront (for caching, HTTPS, WAF, geo-blocking), while blocking direct S3 access.
 
 
-AWS Transfer Family – ghi chú ngắn gọn (3 ý)
+## AWS Transfer Family – ghi chú ngắn gọn (3 ý)
 
 1️⃣ Định nghĩa
 Dịch vụ managed cho phép truyền file vào/ra S3 hoặc EFS thông qua SFTP / FTPS / FTP mà không cần tự quản lý FTP server.
