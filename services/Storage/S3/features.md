@@ -16,3 +16,16 @@ Dùng khi đối tác hoặc hệ thống legacy cần upload/download file bằ
 	•	Không dùng để migrate dữ liệu lớn (so với DataSync)
 	•	Hỗ trợ IAM, SSH key, endpoint public hoặc private (VPC)
 	•	Chi phí tính theo giờ endpoint + data transfer
+
+S3 File Gateway – ghi chú ngắn gọn (3 ý)
+
+1️⃣ Định nghĩa
+Storage Gateway dạng file-based, cho phép hệ thống on-premises truy cập Amazon S3 như file share (NFS / SMB).
+
+2️⃣ Use case
+Ứng dụng legacy cần đọc/ghi file như local filesystem nhưng dữ liệu thực tế lưu trên S3 (backup, shared file, hybrid storage).
+
+3️⃣ Ghi chú
+	•	Có local cache để tăng hiệu năng
+	•	Object lưu trên S3 (map file ↔ object)
+	•	Phù hợp hybrid on-prem ↔ AWS, không dùng cho block storage
