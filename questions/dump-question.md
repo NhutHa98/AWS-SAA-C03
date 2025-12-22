@@ -5724,6 +5724,7 @@ Which solution will meet these requirements with the MOST operational eciency?
 - C. Use Amazon Kinesis Data Firehose to ingest data. Use Amazon Kinesis Data Analytics to analyze the data in real time.
 - D. Use Amazon API Gateway to ingest data. Use AWS Lambda to analyze the data in real time.
 
+## Question #502
 
 A company runs a website that uses a content management system (CMS) on Amazon EC2. The CMS runs on a single EC2 instance and uses an Amazon Aurora MySQL Multi-AZ DB instance for the data tier. Website images are stored on an Amazon Elastic Block Store (Amazon EBS) volume that is mounted inside the EC2 instance.
 

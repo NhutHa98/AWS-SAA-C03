@@ -160,6 +160,12 @@ Bạn **tự define policy**, nhưng **chọn action từ AWS**.
 
 > **AWS định nghĩa Action, bạn định nghĩa Policy, Role quyết định ai được dùng Policy đó trên Resource nào.**
 
----
-
-*Tài liệu này phù hợp cho: AWS SAA / Developer / triển khai ECS, Lambda, EC2 thực tế.*
+# IAM User vs IAM Role (exam table)
+| Use case             | IAM User | IAM Role |
+| -------------------- | -------- | -------- |
+| Human login          | ✅        | ❌        |
+| EC2/Lambda access    | ❌        | ✅        |
+| Cross-account access | ❌        | ✅        |
+| Temporary creds      | ❌        | ✅        |
+| SaaS integration     | ❌        | ✅        |
+| Best practice        | ⚠️       | ⭐        |
