@@ -1,4 +1,4 @@
-# 🛡️ Amazon GuardDuty — Tổng quan ghi nhớ 3 giai đoạn
+# 🛡️ Amazon GuardDuty
 
 ---
 
