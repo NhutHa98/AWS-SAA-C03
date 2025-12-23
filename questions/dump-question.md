@@ -5902,7 +5902,7 @@ Which use cases are suitable for Amazon Redshift in this scenario? (Choose three
 
 ## Question #516
 
-A company provides an API interface to customers so the customers can retrieve their nancial information. Е he company expects a larger number of requests during peak usage times of the year.
+A company provides an API interface to customers so the customers can retrieve their financial information. The company expects a larger number of requests during peak usage times of the year.
 
 The company requires the API to respond consistently with low latency to ensure customer satisfaction. The company needs to provide a compute host for the API.
 
