@@ -1,4 +1,4 @@
-$SERVICE = GuardDuty
+$SERVICE = KMS
 
 Act as an AWS Solutions Architect & AWS Trainer.
 

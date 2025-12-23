@@ -2155,6 +2155,8 @@ Which solution will meet these requirements?
 - C. Launch two EC2 instances, each in a different AWS Region. Install the database on both EC2 instances. Set up database replication. Fail over the database to a second Region.
 - D. Launch an EC2 instance in an Availability Zone. Install the database on the EC2 instance. Use an Amazon Machine Image (AMI) to back up the data. Use EC2 automatic recovery to recover the instance if a disruptive event occurs.
 
+## Question #195
+
 A company's order system sends requests from clients to Amazon EC2 instances. The EC2 instances process the orders and then store the orders in a database on Amazon RDS. Users report that they must reprocess orders when the system fails. The company wants a resilient solution that can process orders automatically if a system outage occurs.
 
 What should a solutions architect do to meet these requirements?
@@ -2171,11 +2173,13 @@ A company runs an application on a large eet of Amazon EC2 instances. The applic
 
 Which solution meets these requirements?
 
-A. Use an AWS CloudFormation template to deploy the complete solution. Redeploy the CloudFormation stack every 30 days, and delete the original stack.
+- A. Use an AWS CloudFormation template to deploy the complete solution. Redeploy the CloudFormation stack every 30 days, and delete the original stack.
 
 - B. Use an EC2 instance that runs a monitoring application from AWS Marketplace. Congure the monitoring application to use Amazon DynamoDB Streams to store the timestamp when a new item is created in the table. Use a script that runs on the EC2 instance to delete items that have a timestamp that is older than 30 days.
 - C. Congure Amazon DynamoDB Streams to invoke an AWS Lambda function when a new item is created in the table. Congure the Lambda function to delete items in the table that are older than 30 days.
 - D. Extend the application to add an attribute that has a value of the current timestamp plus 30 days to each new item that is created in the table. Congure DynamoDB to use the attribute as the TTL attribute.
+
+## Question #197
 
 A company has a Microsoft .NET application that runs on an on-premises Windows Server. The application stores data by using an Oracle Database Standard Edition server. The company is planning a migration to AWS and wants to minimize development changes while moving the application. The AWS application environment should be highly available.
 
@@ -2205,12 +2209,13 @@ A telemarketing company is designing its customer call center functionality on A
 
 Which solution will meet these requirements?
 
-A. Use Amazon Rekognition for multiple speaker recognition. Store the transcript les in Amazon S3. Use machine learning models for transcript le analysis.
+- A. Use Amazon Rekognition for multiple speaker recognition. Store the transcript les in Amazon S3. Use machine learning models for transcript le analysis.
 
 - B. Use Amazon Transcribe for multiple speaker recognition. Use Amazon Athena for transcript le analysis.
 - C. Use Amazon Translate for multiple speaker recognition. Store the transcript les in Amazon Redshift. Use SQL queries for transcript le analysis.
 - D. Use Amazon Rekognition for multiple speaker recognition. Store the transcript les in Amazon S3. Use Amazon Textract for transcript le analysis.
 
+## Question #200
 
 A company hosts its application on AWS. The company uses Amazon Cognito to manage users. When users log in to the application, the application fetches required data from Amazon DynamoDB by using a REST API that is hosted in Amazon API Gateway. The company wants an AWS managed solution that will control access to the REST API to reduce development efforts.
 
