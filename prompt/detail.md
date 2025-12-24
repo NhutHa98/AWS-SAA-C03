@@ -83,6 +83,21 @@ Do NOT go too deep into low-level technical details.
 
 📌 OUTPUT RULES
 ==============================
-- Vietnamese explanation
-- English keywords ONLY for technical terms
-- Put the final answer into CANVAS for easy copy
+Put the entire output into CANVAS for easy copy & reuse
+
+The biggest title must use H1 + bold
+
+Stage headings must strictly follow this format:
+
+⚡ STAGE X — TITLE
+==============================
+
+Do NOT quote or repeat meta notes such as: (super short), (3 bullets), etc.
+
+🎯 FINAL GOAL
+
+Stage 1: Ultra-fast recall in seconds
+
+Stage 2: High-confidence AWS exam revision
+
+Stage 3: Provide full coverage by enumerating all functions and configurations, using concise explanations only, to build clear conceptual understanding and correct service selection
