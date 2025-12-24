@@ -12,7 +12,6 @@ Designed for THREE reading stages:
 Focus on understanding, coverage, and long-term memorization.
 Do NOT go too deep into low-level technical details.
 
-==============================
 ⚡ STAGE 1 — ULTRA-FAST READ (30–60s)
 ==============================
 🧠 MEMORY ANCHORS (VERY IMPORTANT)
@@ -22,7 +21,6 @@ Do NOT go too deep into low-level technical details.
   - < 7 must-remember keywords (English only, ideal: 3)
 - Use emojis to create strong visual memory hooks 🧠✨
 
-==============================
 📝 STAGE 2 — PRE-EXAM READ
 ==============================
 
@@ -50,7 +48,6 @@ Do NOT go too deep into low-level technical details.
 - What $SERVICE is NOT used for
 - 🧠 Keywords: Exam tip, Anti-pattern
 
-==============================
 📚 STAGE 3 — FULL UNDERSTANDING
 ==============================
 
@@ -75,7 +72,7 @@ Do NOT go too deep into low-level technical details.
 - Short comparison bullets (no deep dive)
 - 🧠 Keywords: Choose when, Compare
 
-==============================
+
 📝 STYLE RULES
 ==============================
 - Use emojis naturally (not spammy)
