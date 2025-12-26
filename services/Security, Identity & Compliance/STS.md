@@ -191,3 +191,30 @@ Hễ đề thi nhắc đến:
 * Không dùng long-term access key
 
 👉 Chọn ngay **AWS STS** ⚡🧠
+
+🧪 Các API STS quan trọng (hay ra thi)
+1️⃣ AssumeRole ⭐⭐⭐
+
+Cross-account access
+
+Case phổ biến nhất
+
+2️⃣ AssumeRoleWithWebIdentity
+
+Login bằng:
+
+Cognito
+
+Google
+
+Facebook
+
+Web / Mobile app
+
+3️⃣ GetSessionToken
+
+MFA cho IAM User
+
+4️⃣ AssumeRoleWithSAML
+
+SSO với AD / Okta
